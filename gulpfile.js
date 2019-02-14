@@ -17,6 +17,8 @@ const revCollector = require('gulp-rev-collector');
 const htmlmin = require('gulp-htmlmin');
 const clean = require('gulp-clean');
 const requirejsRevReplace = require('gulp-requirejs-rev-replace');
+const connect = require('gulp-connect');
+const open = require('gulp-open');
 
 gulp.task('style:dev', function () {
   return gulp.src('src/style/**/*.scss')
@@ -95,17 +97,17 @@ gulp.task('js', function () {
     .pipe(gulp.dest('src/js'))
 })
 
-gulp.task('requireConfigReplace', function(){
+gulp.task('requireConfigReplace', function () {
   return gulp.src('./dist/main/**/*.js')
-  .pipe(requirejsRevReplace({
-    manifest: gulp.src('src/js/rev-manifest.json')
-  }))
-  .pipe(gulp.dest('./dist/main'))
+    .pipe(requirejsRevReplace({
+      manifest: gulp.src('src/js/rev-manifest.json')
+    }))
+    .pipe(gulp.dest('./dist/main'))
 })
 
 gulp.task('html', function () {
   return gulp.src(['src/**/*.json', 'src/**/*.html'])
-    .pipe(revCollector({replaceReved: true}))
+    .pipe(revCollector({ replaceReved: true }))
     .pipe(htmlmin({
       removeComments: true, // 清除HTML注释
       collapseWhitespace: true, // 压缩HTML
@@ -124,9 +126,25 @@ gulp.task('copyassets', function () {
     .pipe(gulp.dest('dist/'));
 })
 
-gulp.task('clean', function(){
-  return gulp.src(['./dist/style/**', './dist/js/**', './dist/main/**'], {read:false})
-  .pipe(clean({force: true}))
+gulp.task('clean', function () {
+  return gulp.src(['./dist/style/**', './dist/js/**', './dist/main/**'], { read: false })
+    .pipe(clean({ force: true }))
 })
 
 gulp.task('dist', gulp.series('clean', 'copyassets', 'template', 'style', 'imagemin', 'js', 'html', 'requireConfigReplace'));
+
+gulp.task('devServer', function (done) {
+  connect.server({
+    root: ['./src'],
+    port: 50000,
+    livereload: true
+  })
+  done();
+})
+
+gulp.task('open', gulp.series('devServer', function () {
+  return gulp.src(__filename)
+    .pipe(open({
+      uri: 'http://localhost:50000/index.html'
+    }))
+}))

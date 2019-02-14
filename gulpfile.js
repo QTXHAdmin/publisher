@@ -51,12 +51,6 @@ gulp.task('template', function (done) {
   done();
 })
 
-gulp.task('dev', function () {
-  gulp.watch('src/style/**/*.scss').on('change', gulp.series('style:dev'));
-
-  gulp.watch('src/template/**/*.html').on('change', gulp.series('template'));
-})
-
 gulp.task('style', function () {
   return gulp.src('src/style/**/*.scss')
     .pipe(sass().on('error', sass.logError))
@@ -147,4 +141,10 @@ gulp.task('open', gulp.series('devServer', function () {
     .pipe(open({
       uri: 'http://localhost:50000/index.html'
     }))
+}))
+
+gulp.task('dev', gulp.series('open', function () {
+  gulp.watch('src/style/**/*.scss').on('change', gulp.series('style:dev'));
+
+  gulp.watch('src/template/**/*.html').on('change', gulp.series('template'));
 }))

@@ -1,0 +1,51 @@
+$dropListBorderColor: #e5e5e5;
+
+@mixin topHeaderDropList(){
+  display: none;
+  width: 125px;
+  background-color: #ffffff;
+  border: 1px solid $dropListBorderColor;
+  border-bottom: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  li{
+    height: 40px;
+    line-height: 40px;
+    width: 105px;
+    padding-left: 20px;
+    border-bottom: 1px solid $dropListBorderColor;
+    a{
+      color: #6e6e6e;
+    }
+    &:hover{
+      background-color: #e3e3e3;
+    }
+  }
+  &::before{
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    border-bottom: 13px solid $dropListBorderColor;
+    border-top: 13px solid transparent;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    position: absolute;
+    top: -26px;
+    right: 20px;
+  }
+  &::after{
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    border-bottom: 13px solid #fff;
+    border-top: 13px solid transparent;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    position: absolute;
+    top: -25px;
+    right: 20px;
+  }
+}

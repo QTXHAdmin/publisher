@@ -130,7 +130,7 @@ gulp.task('dist', gulp.series('clean', 'copyassets', 'template', 'style', 'image
 gulp.task('devServer', function (done) {
   connect.server({
     root: ['./src'],
-    port: 50000,
+    port: 3000,
     livereload: true
   })
   done();
@@ -139,7 +139,7 @@ gulp.task('devServer', function (done) {
 gulp.task('open', gulp.series('devServer', function () {
   return gulp.src(__filename)
     .pipe(open({
-      uri: 'http://localhost:50000/index.html'
+      uri: 'http://localhost:3000/index.html'
     }))
 }))
 

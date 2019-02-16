@@ -3,6 +3,7 @@ require.config({
     jquery: '../../lib/jquery.min',
     sh1: '../../lib/sha1',
     easyui: '../../lib/jquery-easyui/jquery.easyui.min',
+    ajaxSetup: '../../js/student/ajaxSetup',
     cookie: '../../lib/js.cookie'
   }
 });
@@ -13,7 +14,7 @@ require(['jquery', 'sh1', 'easyui', 'cookie'], function($, sh1, easyui, Cookies)
       var dataArr = $('#login').serializeArray();
       // console.log(dataArr);
       dataArr[1].value = b64_sha1(dataArr[1].value);
-      console.log(dataArr);
+      // console.log(dataArr);
       $.ajax({
         url: 'http://localhost:45550/authorize',
         type: 'POST',
@@ -24,7 +25,7 @@ require(['jquery', 'sh1', 'easyui', 'cookie'], function($, sh1, easyui, Cookies)
             // console.log('登录成功');
             // $.messager.alert('消息标题', '登录成功', 'info');
             Cookies.set('Authorization', dataArr[1]);
-            window.location.href = 'http://localhost:3000/index.html';
+            window.location.href = 'http://localhost:3000/api/index.html';
           } else {
             // console.log('fail');
             $.messager.alert('消息标题', '登录失败，用户名和密码不匹配', 'error');

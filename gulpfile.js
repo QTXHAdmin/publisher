@@ -19,6 +19,7 @@ const clean = require('gulp-clean');
 const requirejsRevReplace = require('gulp-requirejs-rev-replace');
 const connect = require('gulp-connect');
 const open = require('gulp-open');
+const modRewrite = require('connect-modrewrite');
 
 gulp.task('style:dev', function () {
   return gulp.src('src/style/**/*.scss')
@@ -131,7 +132,14 @@ gulp.task('devServer', function (done) {
   connect.server({
     root: ['./src'],
     port: 3000,
-    livereload: true
+    livereload: true,
+    middleware: function(connect, opt){
+      return [
+        modRewrite([
+          '^/api/(.*)$ http://localhost:3000/$1'
+        ])
+      ]
+    }
   })
   done();
 })
@@ -139,7 +147,7 @@ gulp.task('devServer', function (done) {
 gulp.task('open', gulp.series('devServer', function () {
   return gulp.src(__filename)
     .pipe(open({
-      uri: 'http://localhost:3000/index.html'
+      uri: 'http://localhost:3000/login.html'
     }))
 }))
 

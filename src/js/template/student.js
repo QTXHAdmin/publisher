@@ -175,6 +175,6 @@
     if (typeof define === 'function') {define(function() {return template;});} else if (typeof exports !== 'undefined') {module.exports = template;} else {this.template = template;}
     
     /*v:1*/
-template('header','<div class="top-header-wrap">\n  <div class="logo">\n    <img src="../../assets/image/logo.png" alt="">\n  </div>\n  <div class="search-wrap">\n    <span class="course-or-textbook">课程</span>\n    <input type="text" name="searchCon">\n    <i class="icon iconfont"></i>\n  </div>\n  <div class="userinfo-wrap">\n    <div class="msg-box"></div>\n    <div class="user-option"></div>\n    <div class="stu-or-teacher"></div>\n  </div>\n</div>\n<div class="top-nav"></div>\n');
+template('header','<div class="top-header-wrap">\n  <div class="top-logo-wrap">\n    <div class="top-logo-con">\n      <div class="logo">\n        <img src="../../assets/image/logo.png" alt="">\n      </div>\n      <div class="search-wrap">\n        <span class="course-or-textbook">课程</span>\n        <input type="text" name="searchCon">\n        <i class="icon iconfont"></i>\n      </div>\n      <div class="userinfo-wrap">\n        <div class="msg-box"></div>\n        <div class="user-option"></div>\n        <div class="stu-or-teacher"></div>\n      </div>\n    </div>\n  </div>\n  <div class="top-nav-wrap">\n    <div class="top-nav-con">\n\n    </div>\n  </div>\n</div>\n');
 
 }()

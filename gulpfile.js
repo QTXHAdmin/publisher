@@ -31,6 +31,7 @@ gulp.task('style:dev', function() {
         }))
 
     .pipe(concat('main.css'))
+    .pipe(replace('@charset "UTF-8";', ''))//修改的
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./src/style/'))
 
@@ -81,9 +82,9 @@ gulp.task('imagemin', function() {
 
 gulp.task('js', function() {
     return gulp.src(['src/**/*.js', '!src/lib/**/*.js'])
-        //.pipe(eslint())
-        //.pipe(eslint.format())
-        //.pipe(eslint.failAfterError())
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError())
         .pipe(babel())
         .pipe(uglify())
         .pipe(rev())
@@ -113,7 +114,7 @@ gulp.task('html', function() {
             minifyJS: true, // 压缩页面JS
             minifyCSS: true // 压缩页面CSS
         }))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./dist/'))
 })
 
 gulp.task('copyassets', function() {

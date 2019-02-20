@@ -26,6 +26,7 @@ require(['jquery', 'sh1', 'easyui', 'cookie'], function($, sh1, easyui, Cookies)
             // $.messager.alert('消息标题', '登录成功', 'info');
             Cookies.set('Authorization', dataArr[1]);
             window.location.href = 'http://localhost:3000/api/index.html';
+            // window.location.href = '/view/student/test.html';
           } else {
             // console.log('fail');
             $.messager.alert('消息标题', '登录失败，用户名和密码不匹配', 'error');

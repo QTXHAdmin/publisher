@@ -3,6 +3,10 @@
   "js/student/ajaxSetup.js": "js/student/ajaxSetup-d34fc8a49e.js",
   "js/student/index.js": "js/student/index-cfae560e55.js",
   "js/student/login.js": "js/student/login-8ec0deb47d.js",
+<<<<<<< HEAD
+  "js/template/student.js": "js/template/student-f4e075ada1.js"
+=======
   "js/student/test.js": "js/student/test-5cafdae998.js",
   "js/template/student.js": "js/template/student-f4dcf683ae.js"
+>>>>>>> 70f6ef3e376c986dc409468c06bdd1fe7b64bc15
 }

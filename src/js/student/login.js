@@ -22,13 +22,10 @@ require(['jquery', 'sh1', 'easyui', 'cookie'], function($, sh1, easyui, Cookies)
         dataType: 'json',
         success: function(resData) {
           if (resData.code == 1) {
-            // console.log('登录成功');
             // $.messager.alert('消息标题', '登录成功', 'info');
             Cookies.set('Authorization', dataArr[1]);
-            window.location.href = 'http://localhost:3000/api/index.html';
-            // window.location.href = '/view/student/test.html';
+            window.location.href = 'http://localhost:3000/api/view/student/index.html';
           } else {
-            // console.log('fail');
             $.messager.alert('消息标题', '登录失败，用户名和密码不匹配', 'error');
           }
         }

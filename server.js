@@ -7,7 +7,7 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 
 server.post('/authorize', (req, res) => {
-  if (req.body.userName == 'YIQIAN' && req.body.password == 'WLU5PEbDkYrvMqyIrcU1DRm7itk') {
+  if (req.body.userName === 'YIQIAN' && req.body.password === 'WLU5PEbDkYrvMqyIrcU1DRm7itk') {
     res.jsonp({
       code: 1,
       msg: '验证成功'

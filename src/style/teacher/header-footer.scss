@@ -28,6 +28,7 @@
                 color: #6a6a6a;
                 font-size: 14px;
                 position: relative;
+                // border-left: 1px solid #e0e0e0;
                 .course-or-textbook {
                     $marginLeft: 10px;
                     float: left;
@@ -72,18 +73,18 @@
                     width: 386px;
                     height: 30px;
                     border: 1px solid #e0e0e0;
-                    border-left: none;
+                    // border-left: none;
                     border-radius: 0 2px 2px 0;
                     outline: none;
-                    padding-left: 14px;
+                    // padding-left: 14px;
                 }
                 .searchBtn {
                     font-size: 20px;
                     font-weight: bold;
                     color: #161a24;
                     position: absolute;
-                    right: 8px;
-                    top: 6px;
+                    right: 76px;
+                    top: 5px;
                     cursor: pointer;
                 }
             }
@@ -203,9 +204,9 @@
             position: relative;
             .top-nav-con-l {
                 float: left;
-                width: 367px;
+                width: 256px;
                 .nav-list {
-                    width: 249px;
+                    width: 166px;
                     // margin-top: 15px;
                     float: left;
                     li {

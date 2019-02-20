@@ -31,6 +31,7 @@ gulp.task('style:dev', function() {
         }))
 
     .pipe(concat('main.css'))
+    .pipe(replace('@charset "UTF-8";', ''))//修改的
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./src/style/'))
 
@@ -113,7 +114,7 @@ gulp.task('html', function() {
             minifyJS: true, // 压缩页面JS
             minifyCSS: true // 压缩页面CSS
         }))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./dist/'))
 })
 
 gulp.task('copyassets', function() {

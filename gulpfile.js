@@ -81,9 +81,9 @@ gulp.task('imagemin', function() {
 
 gulp.task('js', function() {
     return gulp.src(['src/**/*.js', '!src/lib/**/*.js'])
-        .pipe(eslint())
-        .pipe(eslint.format())
-        .pipe(eslint.failAfterError())
+        //.pipe(eslint())
+        //.pipe(eslint.format())
+        //.pipe(eslint.failAfterError())
         .pipe(babel())
         .pipe(uglify())
         .pipe(rev())

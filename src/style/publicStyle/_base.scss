@@ -1,4 +1,6 @@
 $dropListBorderColor: #e5e5e5;
+$moduleListBorderColor: #e8e8e8;
+$highlightColor: #3598db;
 @mixin topHeaderDropList() {
     display: none;
     width: 125px;
@@ -47,4 +49,15 @@ $dropListBorderColor: #e5e5e5;
         top: -25px;
         right: 20px;
     }
+}
+
+@mixin modulePrevNextBtn($backgroundColor: #fff){
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background-color: $backgroundColor;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
 }

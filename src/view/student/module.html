@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../assets/font/font_5cho1wkdqgy/iconfont.css">
+  <link rel="stylesheet" href="../../lib/simplePagination.css">
+  <link rel="stylesheet" href="../../style/main.css">
+</head>
+
+<body>
+  <div class="module" student>
+    <div class="header">
+      <div class="top-logo-wrap">
+        <div class="top-logo-con">
+          <div class="logo">
+            <img src="../../assets/image/logo.png" alt="">
+          </div>
+          <div class="search-wrap">
+            <div class="course-or-textbook">
+              <span>课程</span>
+              <i class="icon iconfont icon-drop-down"></i>
+              <ul class="choose-search-category">
+                <li>课程</li>
+                <li>教材</li>
+              </ul>
+            </div>
+            <input type="text" name="searchCon" class="searchCon">
+            <i class="icon iconfont icon-fangdajing searchBtn"></i>
+          </div>
+          <div class="userinfo-wrap">
+            <div class="msg-box">
+              <i class="icon iconfont icon-xiaoxi"></i>
+            </div>
+            <div class="user-option">
+              <img src="../../assets/image/bookCover.png" alt="">
+              <span class="user-name">张三</span>
+              <i class="icon iconfont icon-drop-down"></i>
+              <ul class="option-drop-list">
+                <li>
+                  <a href="#">我的资源</a>
+                </li>
+                <li>
+                  <a href="#">我的订单</a>
+                </li>
+                <li>
+                  <a href="#">个人资料</a>
+                </li>
+                <li>
+                  <a href="#">退出登录</a>
+                </li>
+              </ul>
+            </div>
+            <div class="stu-or-teacher">
+              <span>学生端</span>
+              <i class="icon iconfont icon-drop-down"></i>
+              <ul class="choose-drop-list">
+                <li>学生端</li>
+                <li>教师端</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="top-nav-wrap">
+        <div class="top-nav-con">
+          <div class="top-nav-con-l">
+            <ul class="nav-list">
+              <li>
+                <a href="#">首页</a>
+              </li>
+              <li class="cur">
+                <a href="#">课程</a>
+              </li>
+              <li>
+                <a href="#">教材</a>
+              </li>
+            </ul>
+            <span class="nav-sep">|</span>
+            <span class="myStudy">
+              <a href="#">我的学习</a>
+            </span>
+          </div>
+          <div class="top-nav-con-r">
+            <div class="clearfix">
+              <span class="invite-code">
+                <a href="#">通过课程邀请码加入课程</a>
+              </span>
+              <span class="nav-sep">|</span>
+              <span class="serial-number">
+                <a href="#">通过序列号获取资源权限</a>
+              </span>
+            </div>
+          </div>
+          <div class="special"></div>
+        </div>
+      </div>
+    </div>
+    <div class="module-nav">
+      <ul class="nav-list">
+        <li>
+          <a href="#">首页</a>
+        </li>
+        <li class="sep">></li>
+        <li>
+          <a href="#">课程</a>
+        </li>
+        <li class="sep">></li>
+        <li>
+          <a href="#">一级分类名称</a>
+        </li>
+        <li class="sep">></li>
+        <li class="cur-position">
+          <a href="#">二级分类名称</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="module-main-wrap">
+      <div class="module-main-con">
+        <ul class="dropdown-menu">
+          <li class="first-cate">
+            <div class="first-cate-title">
+              <span class="fold-symbol">+</span>
+              <span class="title">课程一级分类</span>
+            </div>
+            <ul class="subcate-list">
+              <li class="subcate">课程二级分类</li>
+              <li class="subcate">课程二级分类</li>
+              <li class="subcate">课程二级分类</li>
+            </ul>
+          </li>
+          <li class="first-cate">
+            <div class="first-cate-title">
+              <span class="fold-symbol">+</span>
+              <span class="title">课程一级分类</span>
+            </div>
+            <ul class="subcate-list">
+              <li class="subcate">课程二级分类</li>
+              <li class="subcate">课程二级分类</li>
+              <li class="subcate">课程二级分类</li>
+            </ul>
+          </li>
+          <li class="first-cate">
+            <div class="first-cate-title">
+              <span class="fold-symbol">+</span>
+              <span class="title">课程一级分类</span>
+            </div>
+            <ul class="subcate-list">
+              <li class="subcate">课程二级分类</li>
+              <li class="subcate">课程二级分类</li>
+              <li class="subcate">课程二级分类</li>
+            </ul>
+          </li>
+          <li class="first-cate">
+            <div class="first-cate-title">
+              <span class="fold-symbol">+</span>
+              <span class="title">课程一级分类</span>
+            </div>
+            <ul class="subcate-list">
+              <li class="subcate">课程二级分类</li>
+              <li class="subcate">课程二级分类</li>
+              <li class="subcate">课程二级分类</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="module-list-wrap">
+          <div class="page-nav">
+            <div class="total-module">
+              共<span class="total-module-num">100</span>个课程
+            </div>
+            <div class="simple-pager">
+              <span class="previous-page"><</span><!--
+              --><span class="cur-page">1</span><!--
+              --><span class="sep">/</span><!--
+              --><span class="total-page">10</span><!--
+              --><span class="next-page">></span>
+            </div>
+          </div>
+          <div class="module-list-maincon">
+            <ul class="module-list">
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../assets/image/bookCover.png" alt="">
+                  <span class="module-title">课程名称课程名称课程名称课程名称课程名称</span>
+                </a>
+                <div class="author-wrap">
+                  <span class="author-name">杜逸鸣</span>
+                  <span class="author-college">哈尔滨工业大学</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="pagination-wrap">
+            <div class="total-module">
+              共<span class="total-module-num">100</span>个课程
+            </div>
+            <div class="pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+        Copyrignt © 2004-2016 哈尔滨工业大学出版社 版权所有 京ICP备11017824号-7
+      </div>
+  </div>
+  <!-- <script src="./lib/require.js" data-main="./js/student/module.js"></script> -->
+  <script src="../../lib/jquery.min.js"></script>
+  <script src="../../lib/jquery.simplePagination.js"></script>
+  <script src="../../js/student/module.js"></script>
+</body>
+
+</html>

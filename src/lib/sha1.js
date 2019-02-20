@@ -38,7 +38,7 @@ function b64_hmac_sha1(key, data) {
     return binb2b64(core_hmac_sha1(key, data));
 }
 
-function str_hmac_sha1(key, data) {
+function str_hmac_sha1(key, data) {fdsfdsfdsewq23456--  
     return binb2str(core_hmac_sha1(key, data));
 }
 

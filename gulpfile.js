@@ -31,27 +31,41 @@ gulp.task('style:dev', function() {
         }))
 
     .pipe(concat('main.css'))
-    .pipe(replace('@charset "UTF-8";', ''))//修改的
+        .pipe(replace('@charset "UTF-8";', '')) //修改的
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./src/style/'))
 
 })
 
-gulp.task('template', function(done) {
-    let basePath = path.join(__dirname, 'src/template');
-    let files = fs.readdirSync(basePath);
-    files.forEach(function(val, index) {
-        gulp.src('src/template/' + val + '/**/*.html')
-            .pipe(tmodjs({
-                templateBase: 'src/template/' + val,
-                runtime: val + '.js',
+// gulp.task('template', function(done) {
+//     let basePath = path.join(__dirname, 'src/template');
+//     let files = fs.readdirSync(basePath);
+//     gulp.src('src/template/' + val + '/**/*.html')
+//         .pipe(tmodjs({
+//             templateBase: 'src/template/' + val,
+//             runtime: val + '.js',
+//             compress: false
+//         }))
+//         .pipe(replace('var String = this.String;', 'var String = window.String;'))
+//         .pipe(gulp.dest('src/js/template/'));
+//     done();
+// })
+// 创建一个任务：把模板生成js文件(相当于将模板预编译)
+gulp.task('template', function() {
+    return gulp
+        .src('src/template/**/*.html')
+        .pipe(
+            tmodjs({
+                templateBase: 'src/template/',
+                runtime: 'tpl.js',
                 compress: false
             }))
-            .pipe(replace('var String = this.String;', 'var String = window.String;'))
-            .pipe(gulp.dest('src/js/template/'));
-    })
-    done();
-})
+        // 自动生成的模板文件，进行babel转换，会报错，此转换插件已经停更，所以间接改这个bug
+        // 参考bug：https://github.com/aui/tmodjs/issues/112 主要是this  →  window
+        .pipe(replace('var String = this.String;', 'var String = window.String;'))
+
+    .pipe(gulp.dest('src/js/template'));
+});
 
 gulp.task('style', function() {
     return gulp.src('src/style/**/*.scss')
@@ -132,12 +146,12 @@ gulp.task('dist', gulp.series('clean', 'copyassets', 'template', 'style', 'image
 gulp.task('devServer', function(done) {
     connect.server({
         root: ['./src'],
-        port: 3000,
+        port: 30000,
         livereload: true,
         middleware: function(connect, opt) {
             return [
                 modRewrite([
-                    '^/api/(.*)$ http://localhost:3000/$1'
+                    '^/api/(.*)$ http://localhost:30000/$1'
                 ])
             ]
         }
@@ -148,7 +162,7 @@ gulp.task('devServer', function(done) {
 gulp.task('open', gulp.series('devServer', function() {
     return gulp.src(__filename)
         .pipe(open({
-            uri: 'http://localhost:3000/login.html'
+            uri: 'http://localhost:30000/login.html'
         }))
 }))
 

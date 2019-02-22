@@ -150,6 +150,9 @@
       margin-left: 11px;
       width: 242px;
       float: left;
+      ul{
+        background-color: #fff;
+      }
       .title{
         height: 45px;
         border-bottom: 1px solid $moduleListBorderColor;

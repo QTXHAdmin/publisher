@@ -27,6 +27,7 @@ require(['jquery', 'Swiper', 'tpl', 'service'], function($, Swiper, tpl, service
 
     function getteacherhomeinfo() {
         service.getTeacherHomeInfo(function(data) {
+          console.log(data);
             let LogoImg = {
                 loginImg: data.img_src.loginImg,
                 swiperImg: data.img_src.swiperImg,
@@ -34,10 +35,11 @@ require(['jquery', 'Swiper', 'tpl', 'service'], function($, Swiper, tpl, service
                 teacher: data.userInfo[1].teacher,
             }
             let lessions = data.lessions;
-            console.log(LogoImg.swiperImg);
-            console.log(lessions);
+            console.log(LogoImg);
+            // console.log(lessions);
+            console.log(lessions[0].img_src);
             $('.swiperImg').attr('src', LogoImg.swiperImg);
-            $('.header-wrap').html(tpl('Header', LogoImg));
+            $('.header-wrap').html(tpl('header', LogoImg));
         });
     }
 });

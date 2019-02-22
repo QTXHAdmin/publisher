@@ -27,17 +27,20 @@ require(['jquery', 'Swiper', 'tpl', 'service'], function($, Swiper, tpl, service
 
     function getteacherhomeinfo() {
         service.getTeacherHomeInfo(function(data) {
-            let LogoImg = {
-                loginImg: data.img_src.loginImg,
-                swiperImg: data.img_src.swiperImg,
-                userName: data.userInfo[1].SuserName,
-                teacher: data.userInfo[1].teacher,
+            let a = {
+                LogoImg: data[1].img_src.loginImg,
+                swiperImg: data[1].img_src.swiperImg,
+                SuserName: data[0].userInfo[1].SuserName,
+                teacher: data[0].userInfo[1].teacher,
+                lessons: data[2].lessons
             }
-            let lessions = data.lessions;
-            console.log(LogoImg.swiperImg);
-            console.log(lessions);
-            $('.swiperImg').attr('src', LogoImg.swiperImg);
-            $('.header-wrap').html(tpl('Header', LogoImg));
+            let lessonItem = a.lessons;
+            $('.swiperImg').attr('src', a.swiperImg);
+            $('.header-wrap').html(tpl('Header', a));
+            $('.recom-list').html(tpl('Lessons', lessonItem));
+            console.log(lessonItem);
+            console.log(lessonItem[0].title);
+
         });
     }
 });

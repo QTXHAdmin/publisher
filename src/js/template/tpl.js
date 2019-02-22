@@ -95,6 +95,7 @@
         $escape: escapeHTML,
 
         $each: each
+        
     };
 
 
@@ -107,7 +108,7 @@
             name: 'Render Error',
             message: 'Template not found'
         });
-        return data ? fn(data) : fn;
+        return data ? fn(data) : fn; 
     };
 
 
@@ -149,7 +150,7 @@
             // 调试版本，直接给出模板语句行
             for (var name in e) {
                 message += "<" + name + ">\n" + e[name] + "\n\n";
-            }
+            }  
         }
 
         return function () {
@@ -172,7 +173,7 @@
 
 
     if (typeof define === 'function') {define(function() {return template;});} else if (typeof exports !== 'undefined') {module.exports = template;} else {this.template = template;}
-
+    
     /*v:1*/
 template('header',function($data,$filename
 /*``*/) {

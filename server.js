@@ -1,7 +1,7 @@
 const jsonServer = require('json-server');
 const server = jsonServer.create();
 const middlewares = jsonServer.defaults();
-
+const router = jsonServer.router('./db.json');
 server.use(middlewares);
 
 server.use(jsonServer.bodyParser);
@@ -27,6 +27,8 @@ server.use('/api', (req, res, next) => {
     res.sendStatus(401);
   }
 });
+
+server.use(router);
 
 server.listen(45550, () => {
   console.log('JSON Server is running');

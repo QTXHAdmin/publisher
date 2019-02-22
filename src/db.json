@@ -1,17 +1,19 @@
 {
-    "indexInfo": {
+    "a": [{
         "userInfo": [{
             "TuserName": "YQ",
             "student": "学生端"
         }, {
             "SuserName": "ZH",
             "teacher": "教师端"
-        }],
+        }]
+    }, {
         "img_src": {
             "loginImg": "/assets/image/logo.png",
             "swiperImg": "/assets/image/banner1.png"
-        },
-        "lessions": [{
+        }
+    }, {
+        "lessons": [{
             "id": 1,
             "title": "课程名称1",
             "img_src": "/assets/image/bookCover.png"
@@ -52,5 +54,5 @@
             "title": "课程名称10",
             "img_src": "/assets/image/bookCover.png"
         }]
-    }
+    }]
 }

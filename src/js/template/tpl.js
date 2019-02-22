@@ -189,9 +189,9 @@ return new String($out);
 template('Lessons',function($data,$filename
 ) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,lessonItem=$data.lessonItem,$value=$data.$value,$index=$data.$index,$escape=$utils.$escape,$out='';$each(lessonItem,function($value,$index){
-$out+='\n<li>\n    <a href="">\n        <img src="../../assets/image/bookCover.png" alt="">\n        <span class="course-name">';
+$out+='\r\n<li>\r\n    <a href="">\r\n        <img src="../../assets/image/bookCover.png" alt="">\r\n        <span class="course-name">';
 $out+=$escape($value.title);
-$out+='</span>\n    </a>\n</li>\n';
+$out+='</span>\r\n    </a>\r\n</li>\r\n';
 });
 return new String($out);
 });/*v:1*/

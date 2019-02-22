@@ -1,7 +1,7 @@
-{{each lessonItem}}
+{{each}}
 <li>
     <a href="">
-        <img src="../../assets/image/bookCover.png" alt="">
+        <img src="{{$value.img_src}}" alt="">
         <span class="course-name">{{$value.title}}</span>
     </a>
 </li>

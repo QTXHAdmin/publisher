@@ -1,6 +1,8 @@
 $dropListBorderColor: #e5e5e5;
 $moduleListBorderColor: #e8e8e8;
 $highlightColor: #3598db;
+$moduleDetailMainFontColor: #666666;
+$moduleDetailTitleColor: #1a1a1a;
 @mixin topHeaderDropList() {
     display: none;
     width: 125px;

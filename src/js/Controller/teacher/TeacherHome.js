@@ -35,11 +35,14 @@ require(['jquery', 'Swiper', 'tpl', 'service'], function($, Swiper, tpl, service
                 lessons: data[2].lessons
             }
             let lessonItem = a.lessons;
-            $('.swiperImg').attr('src', a.swiperImg);
+            $('.swiperImg1').attr('src', a.swiperImg[0].swiper_src);
+            $('.swiperImg2').attr('src', a.swiperImg[1].swiper_src);
+            $('.swiperImg3').attr('src', a.swiperImg[2].swiper_src);
             $('.header-wrap').html(tpl('Header', a));
             $('.recom-list').html(tpl('Lessons', lessonItem));
+            console.log(a.swiperImg);
             console.log(lessonItem);
-            console.log(lessonItem[0].title);
+            console.log(lessonItem[0].img_src);
 
         });
     }

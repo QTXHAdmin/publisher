@@ -188,11 +188,14 @@ return new String($out);
 });/*v:1*/
 template('Lessons',function($data,$filename
 ) {
-'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,lessonItem=$data.lessonItem,$value=$data.$value,$index=$data.$index,$escape=$utils.$escape,$out='';$each(lessonItem,function($value,$index){
-$out+='\n<li>\n    <a href="">\n        <img src="../../assets/image/bookCover.png" alt="">\n        <span class="course-name">';
+'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,$value=$data.$value,$index=$data.$index,$escape=$utils.$escape,$out='';$each($data,function($value,$index){
+$out+='\n<li>\n    <a href="">\n        <img src="';
+$out+=$escape($value.img_src);
+$out+='" alt="">\n        <span class="course-name">';
 $out+=$escape($value.title);
 $out+='</span>\n    </a>\n</li>\n';
 });
+$out+='\n';
 return new String($out);
 });/*v:1*/
 template('student/header','<div class="top-header-wrap">\n    <div class="top-logo-wrap">\n        <div class="top-logo-con">\n            <div class="logo">\n                <img src="../../assets/image/logo.png" alt="">\n            </div>\n            <div class="search-wrap">\n                <span class="course-or-textbook">课程</span>\n                <input type="text" name="searchCon">\n                <i class="icon iconfont"></i>\n            </div>\n            <div class="userinfo-wrap">\n                <div class="msg-box"></div>\n                <div class="user-option"></div>\n                <div class="stu-or-teacher"></div>\n            </div>\n        </div>\n    </div>\n    <div class="top-nav-wrap">\n        <div class="top-nav-con">\n\n        </div>\n    </div>\n</div>');

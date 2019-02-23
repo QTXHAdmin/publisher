@@ -33,13 +33,13 @@ require(['jquery', 'Swiper', 'service', 'tpl'], function ($, Swiper, service, tp
   function getStuIndexPageData() {
     service.getStuIndexPageData(function (data) {
       let LogoImg = {
-        loginImg: data.img_src.loginImg,
-        swiperImg: data.img_src.swiperImg,
-        userName: data.userInfo[0].TuserName,
-        teacher: data.userInfo[0].student,
-        userImg: data.img_src.userImg
+        loginImg: data[1].img_src.loginImg,
+        // swiperImg: data[0].img_src.swiperImg.swiper_src,
+        userName: data[0].userInfo[0].TuserName,
+        teacher: data[0].userInfo[0].student,
+        // userImg: data[0].img_src.userImg
       }
-      $('.header-wrap').html(tpl('header', LogoImg));
+      $('.header-wrap').html(tpl('Header', LogoImg));
     })
   }
 });

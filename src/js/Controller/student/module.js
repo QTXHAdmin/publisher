@@ -19,13 +19,13 @@ require(['jquery', 'simplePagination', 'sevice', 'tpl'], function($, simplePagin
 function getModuleIndexPageData(){
   service.getStuIndexPageData(function (data) {
     let LogoImg = {
-      loginImg: data.img_src.loginImg,
+      loginImg: data[1].img_src.loginImg,
       // swiperImg: data.img_src.swiperImg,
-      userName: data.userInfo[0].TuserName,
-      teacher: data.userInfo[0].student,
-      userImg: data.img_src.userImg
+      userName: data[0].userInfo[0].TuserName,
+      teacher: data[0].userInfo[0].student,
+      // userImg: data.img_src.userImg
     }
-    $('.header-wrap').html(tpl('header', LogoImg));
+    $('.header-wrap').html(tpl('Header', LogoImg));
   })
 }
 

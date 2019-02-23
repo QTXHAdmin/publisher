@@ -95,7 +95,7 @@
         $escape: escapeHTML,
 
         $each: each
-
+        
     };
 
 
@@ -108,7 +108,7 @@
             name: 'Render Error',
             message: 'Template not found'
         });
-        return data ? fn(data) : fn;
+        return data ? fn(data) : fn; 
     };
 
 
@@ -150,7 +150,7 @@
             // 调试版本，直接给出模板语句行
             for (var name in e) {
                 message += "<" + name + ">\n" + e[name] + "\n\n";
-            }
+            }  
         }
 
         return function () {
@@ -173,36 +173,21 @@
 
 
     if (typeof define === 'function') {define(function() {return template;});} else if (typeof exports !== 'undefined') {module.exports = template;} else {this.template = template;}
-
+    
     /*v:1*/
-<<<<<<< HEAD
-template('header',function($data,$filename
-/*``*/) {
-'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,loginImg=$data.loginImg,userImg=$data.userImg,userName=$data.userName,teacher=$data.teacher,$out='';$out+='<div class="header">\n  <div class="top-logo-wrap">\n    <div class="top-logo-con">\n      <div class="logo">\n        <img class="logoImg" src="';
-$out+=$escape(loginImg);
-$out+='" alt="">\n      </div>\n      <div class="search-wrap">\n        <div class="course-or-textbook">\n          <span>课程</span>\n          <i class="icon iconfont icon-drop-down"></i>\n          <ul class="choose-search-category">\n            <li>课程</li>\n            <li>教材</li>\n          </ul>\n        </div>\n        <input type="text" name="searchCon" class="searchCon">\n        <i class="icon iconfont icon-fangdajing searchBtn"></i>\n      </div>\n      <div class="userinfo-wrap">\n        <div class="msg-box">\n          <i class="icon iconfont icon-xiaoxi"></i>\n        </div>\n        <div class="user-option">\n          <img src="';
-$out+=$escape(userImg);
-$out+='" alt="">\n          <span class="user-name">';
-$out+=$escape(userName);
-$out+='</span>\n          <i class="icon iconfont icon-drop-down"></i>\n          <ul class="option-drop-list">\n            <li>\n              <a href="#">我的资源</a>\n            </li>\n            <li>\n              <a href="#">我的订单</a>\n            </li>\n            <li>\n              <a href="#">个人资料</a>\n            </li>\n            <li>\n              <a href="#">退出登录</a>\n            </li>\n          </ul>\n        </div>\n        <div class="stu-or-teacher">\n          <span>';
-=======
 template('Header',function($data,$filename
-) {
-'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,LogoImg=$data.LogoImg,SuserName=$data.SuserName,teacher=$data.teacher,$out='';$out+='<div class="header">\n    <div class="top-logo-wrap">\n        <div class="top-logo-con">\n            <div class="logo">\n                <img class="logoImg" src="';
-$out+=$escape(LogoImg);
-$out+='" alt="">\n            </div>\n            <div class="search-wrap">\n                <input type="text" name="searchCon" class="searchCon">\n                <i class="icon iconfont icon-fangdajing searchBtn"></i>\n            </div>\n            <div class="userinfo-wrap">\n                <div class="msg-box">\n                    <i class="icon iconfont icon-xiaoxi"></i>\n                </div>\n                <div class="user-option">\n                    <img src="./assets/image/bookCover.png" alt="">\n                    <span class="user-name">';
-$out+=$escape(SuserName);
-$out+='</span>\n                    <i class="icon iconfont icon-drop-down"></i>\n                    <ul class="option-drop-list">\n                        <li>\n                            <a href="#">我的资源</a>\n                        </li>\n                        <li>\n                            <a href="#">我的订单</a>\n                        </li>\n                        <li>\n                            <a href="#">个人资料</a>\n                        </li>\n                        <li>\n                            <a href="#">退出登录</a>\n                        </li>\n                    </ul>\n                </div>\n                <div class="stu-or-teacher">\n                    <span>';
->>>>>>> bae1c0e501aff76e9368cc72a53d165224fcc483
+/*``*/) {
+'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,loginImg=$data.loginImg,userName=$data.userName,teacher=$data.teacher,$out='';$out+='<div class="header">\n    <div class="top-logo-wrap">\n      <div class="top-logo-con">\n        <div class="logo">\n          <img class="logoImg" src="';
+$out+=$escape(loginImg);
+$out+='" alt="">\n        </div>\n        <div class="search-wrap">\n          <div class="course-or-textbook">\n            <span>课程</span>\n            <i class="icon iconfont icon-drop-down"></i>\n            <ul class="choose-search-category">\n              <li>课程</li>\n              <li>教材</li>\n            </ul>\n          </div>\n          <input type="text" name="searchCon" class="searchCon">\n          <i class="icon iconfont icon-fangdajing searchBtn"></i>\n        </div>\n        <div class="userinfo-wrap">\n          <div class="msg-box">\n            <i class="icon iconfont icon-xiaoxi"></i>\n          </div>\n          <div class="user-option">\n            <img src="/assets/img/bookCover.png" alt="">\n            <span class="user-name">';
+$out+=$escape(userName);
+$out+='</span>\n            <i class="icon iconfont icon-drop-down"></i>\n            <ul class="option-drop-list">\n              <li>\n                <a href="#">我的资源</a>\n              </li>\n              <li>\n                <a href="#">我的订单</a>\n              </li>\n              <li>\n                <a href="#">个人资料</a>\n              </li>\n              <li>\n                <a href="#">退出登录</a>\n              </li>\n            </ul>\n          </div>\n          <div class="stu-or-teacher">\n            <span>';
 $out+=$escape(teacher);
-$out+='</span>\n          <i class="icon iconfont icon-drop-down"></i>\n          <ul class="choose-drop-list">\n            <li>学生端</li>\n            <li>教师端</li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class="top-nav-wrap">\n    <div class="top-nav-con">\n      <div class="top-nav-con-l">\n        <ul class="nav-list">\n          <li class="cur">\n            <a href="#">首页</a>\n          </li>\n          <li>\n            <a href="#">课程</a>\n          </li>\n          <li>\n            <a href="#">教材</a>\n          </li>\n        </ul>\n        <span class="nav-sep">|</span>\n        <span class="myStudy">\n          <a href="#">我的教学</a>\n        </span>\n      </div>\n      <div class="top-nav-con-r">\n        <div class="clearfix">\n          <span class="invite-code">\n            <a href="#">通过课程邀请码加入课程</a>\n          </span>\n          <span class="nav-sep">|</span>\n          <span class="serial-number">\n            <a href="#">通过序列号获取资源权限</a>\n          </span>\n        </div>\n      </div>\n      <div class="special"></div>\n    </div>\n  </div>\n</div>\n';
+$out+='</span>\n            <i class="icon iconfont icon-drop-down"></i>\n            <ul class="choose-drop-list">\n              <li>学生端</li>\n              <li>教师端</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class="top-nav-wrap">\n      <div class="top-nav-con">\n        <div class="top-nav-con-l">\n          <ul class="nav-list">\n            <li class="cur">\n              <a href="#">首页</a>\n            </li>\n            <li>\n              <a href="#">课程</a>\n            </li>\n            <li>\n              <a href="#">教材</a>\n            </li>\n          </ul>\n          <span class="nav-sep">|</span>\n          <span class="myStudy">\n            <a href="#">我的教学</a>\n          </span>\n        </div>\n        <div class="top-nav-con-r">\n          <div class="clearfix">\n            <span class="invite-code">\n              <a href="#">通过课程邀请码加入课程</a>\n            </span>\n            <span class="nav-sep">|</span>\n            <span class="serial-number">\n              <a href="#">通过序列号获取资源权限</a>\n            </span>\n          </div>\n        </div>\n        <div class="special"></div>\n      </div>\n    </div>\n  </div>\n';
 return new String($out);
-<<<<<<< HEAD
-});
-=======
 });/*v:1*/
 template('Lessons',function($data,$filename
-) {
+/*``*/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,$value=$data.$value,$index=$data.$index,$escape=$utils.$escape,$out='';$each($data,function($value,$index){
 $out+='\n<li>\n    <a href="">\n        <img src="';
 $out+=$escape($value.img_src);
@@ -212,8 +197,6 @@ $out+='</span>\n    </a>\n</li>\n';
 });
 $out+='\n';
 return new String($out);
-});/*v:1*/
-template('student/header','<div class="top-header-wrap">\n    <div class="top-logo-wrap">\n        <div class="top-logo-con">\n            <div class="logo">\n                <img src="../../assets/image/logo.png" alt="">\n            </div>\n            <div class="search-wrap">\n                <span class="course-or-textbook">课程</span>\n                <input type="text" name="searchCon">\n                <i class="icon iconfont"></i>\n            </div>\n            <div class="userinfo-wrap">\n                <div class="msg-box"></div>\n                <div class="user-option"></div>\n                <div class="stu-or-teacher"></div>\n            </div>\n        </div>\n    </div>\n    <div class="top-nav-wrap">\n        <div class="top-nav-con">\n\n        </div>\n    </div>\n</div>');
->>>>>>> bae1c0e501aff76e9368cc72a53d165224fcc483
+});
 
 }()

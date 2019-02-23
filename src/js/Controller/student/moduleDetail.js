@@ -18,9 +18,9 @@ require(['jquery', 'service', 'tpl'], function ($, service, tpl) {
         // swiperImg: data.img_src.swiperImg,
         userName: data.userInfo[0].TuserName,
         teacher: data.userInfo[0].student,
-        userImg: data.img_src.userImg
+        // userImg: data.img_src.userImg
       }
-      $('.header-wrap').html(tpl('header', LogoImg));
+      $('.header-wrap').html(tpl('Header', LogoImg));
     })
   }
 })

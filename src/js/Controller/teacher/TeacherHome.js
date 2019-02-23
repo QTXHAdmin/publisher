@@ -27,6 +27,21 @@ require(['jquery', 'Swiper', 'tpl', 'service'], function($, Swiper, tpl, service
 
     function getteacherhomeinfo() {
         service.getTeacherHomeInfo(function(data) {
+<<<<<<< HEAD
+          console.log(data);
+            let LogoImg = {
+                loginImg: data.img_src.loginImg,
+                swiperImg: data.img_src.swiperImg,
+                userName: data.userInfo[1].SuserName,
+                teacher: data.userInfo[1].teacher,
+            }
+            let lessions = data.lessions;
+            console.log(LogoImg);
+            // console.log(lessions);
+            console.log(lessions[0].img_src);
+            $('.swiperImg').attr('src', LogoImg.swiperImg);
+            $('.header-wrap').html(tpl('header', LogoImg));
+=======
             let a = {
                 LogoImg: data[1].img_src.loginImg,
                 swiperImg: data[1].img_src.swiperImg,
@@ -44,6 +59,7 @@ require(['jquery', 'Swiper', 'tpl', 'service'], function($, Swiper, tpl, service
             console.log(lessonItem);
             console.log(lessonItem[0].img_src);
 
+>>>>>>> bae1c0e501aff76e9368cc72a53d165224fcc483
         });
     }
 });

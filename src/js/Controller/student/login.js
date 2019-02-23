@@ -1,10 +1,10 @@
 require.config({
     paths: {
-        jquery: '../../lib/jquery.min',
-        sh1: '../../lib/sha1',
-        easyui: '../../lib/jquery-easyui/jquery.easyui.min',
-        ajaxSetup: '../../js/student/ajaxSetup',
-        cookie: '../../lib/js.cookie'
+        jquery: '../../../lib/jquery.min',
+        sh1: '../../../lib/sha1',
+        easyui: '../../../lib/jquery-easyui/jquery.easyui.min',
+        ajaxSetup: '../../../js/student/ajaxSetup',
+        cookie: '../../../lib/js.cookie'
     }
 });
 

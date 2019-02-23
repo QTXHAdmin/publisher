@@ -27,6 +27,7 @@ require(['jquery', 'Swiper', 'tpl', 'service'], function($, Swiper, tpl, service
 
     function getteacherhomeinfo() {
         service.getTeacherHomeInfo(function(data) {
+<<<<<<< HEAD
           console.log(data);
             let LogoImg = {
                 loginImg: data.img_src.loginImg,
@@ -40,6 +41,25 @@ require(['jquery', 'Swiper', 'tpl', 'service'], function($, Swiper, tpl, service
             console.log(lessions[0].img_src);
             $('.swiperImg').attr('src', LogoImg.swiperImg);
             $('.header-wrap').html(tpl('header', LogoImg));
+=======
+            let a = {
+                LogoImg: data[1].img_src.loginImg,
+                swiperImg: data[1].img_src.swiperImg,
+                SuserName: data[0].userInfo[1].SuserName,
+                teacher: data[0].userInfo[1].teacher,
+                lessons: data[2].lessons
+            }
+            let lessonItem = a.lessons;
+            $('.swiperImg1').attr('src', a.swiperImg[0].swiper_src);
+            $('.swiperImg2').attr('src', a.swiperImg[1].swiper_src);
+            $('.swiperImg3').attr('src', a.swiperImg[2].swiper_src);
+            $('.header-wrap').html(tpl('Header', a));
+            $('.recom-list').html(tpl('Lessons', lessonItem));
+            console.log(a.swiperImg);
+            console.log(lessonItem);
+            console.log(lessonItem[0].img_src);
+
+>>>>>>> bae1c0e501aff76e9368cc72a53d165224fcc483
         });
     }
 });

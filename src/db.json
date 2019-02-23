@@ -1,0 +1,64 @@
+{
+    "a": [{
+        "userInfo": [{
+            "TuserName": "YQ",
+            "student": "学生端"
+        }, {
+            "SuserName": "ZH",
+            "teacher": "教师端"
+        }]
+    }, {
+        "img_src": {
+            "loginImg": "/assets/image/logo.png",
+            "swiperImg": [{
+              "swiper_src":"/assets/image/swiper1.jpg"
+            },{
+              "swiper_src":"/assets/image/swiper2.jpg"
+            },{
+              "swiper_src":"/assets/image/swiper3.jpg"
+            }]
+        }
+    }, {
+        "lessons": [{
+            "id": 1,
+            "title": "课程名称1",
+            "img_src": "/assets/image/1.jpg"
+        }, {
+            "id": 2,
+            "title": "课程名称2",
+            "img_src": "/assets/image/2.jpg"
+        }, {
+            "id": 3,
+            "title": "课程名称3",
+            "img_src": "/assets/image/3.jpg"
+        }, {
+            "id": 4,
+            "title": "课程名称4",
+            "img_src": "/assets/image/4.jpg"
+        }, {
+            "id": 5,
+            "title": "课程名称5",
+            "img_src": "/assets/image/5.jpg"
+        }, {
+            "id": 6,
+            "title": "课程名称6",
+            "img_src": "/assets/image/6.jpg"
+        }, {
+            "id": 7,
+            "title": "课程名称7",
+            "img_src": "/assets/image/7.jpg"
+        }, {
+            "id": 8,
+            "title": "课程名称8",
+            "img_src": "/assets/image/8.jpg"
+        }, {
+            "id": 9,
+            "title": "课程名称9",
+            "img_src": "/assets/image/9.jpg"
+        }, {
+            "id": 10,
+            "title": "课程名称10",
+            "img_src": "/assets/image/10.jpg"
+        }]
+    }]
+}

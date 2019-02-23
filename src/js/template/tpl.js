@@ -177,8 +177,8 @@
     /*v:1*/
 template('Header',function($data,$filename
 /*``*/) {
-'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,loginImg=$data.loginImg,userName=$data.userName,teacher=$data.teacher,$out='';$out+='<div class="header">\n  <div class="top-logo-wrap">\n    <div class="top-logo-con">\n      <div class="logo">\n        <img class="logoImg" src="';
-$out+=$escape(loginImg);
+'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,logoImg=$data.logoImg,userName=$data.userName,teacher=$data.teacher,$out='';$out+='<div class="header">\n  <div class="top-logo-wrap">\n    <div class="top-logo-con">\n      <div class="logo">\n        <img class="logoImg" src="';
+$out+=$escape(logoImg);
 $out+='" alt="">\n      </div>\n      <div class="search-wrap">\n        <div class="course-or-textbook">\n          <span>课程</span>\n          <i class="icon iconfont icon-drop-down"></i>\n          <ul class="choose-search-category">\n            <li>课程</li>\n            <li>教材</li>\n          </ul>\n        </div>\n        <input type="text" name="searchCon" class="searchCon">\n        <i class="icon iconfont icon-fangdajing searchBtn"></i>\n      </div>\n      <div class="userinfo-wrap">\n        <div class="msg-box">\n          <i class="icon iconfont icon-xiaoxi"></i>\n        </div>\n        <div class="user-option">\n          <img src="/assets/img/bookCover.png" alt="">\n          <span class="user-name">';
 $out+=$escape(userName);
 $out+='</span>\n          <i class="icon iconfont icon-drop-down"></i>\n          <ul class="option-drop-list">\n            <li>\n              <a href="#">我的资源</a>\n            </li>\n            <li>\n              <a href="#">我的订单</a>\n            </li>\n            <li>\n              <a href="#">个人资料</a>\n            </li>\n            <li>\n              <a href="#">退出登录</a>\n            </li>\n          </ul>\n        </div>\n        <div class="stu-or-teacher">\n          <span>';

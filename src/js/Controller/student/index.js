@@ -1,13 +1,12 @@
 require.config({
   // shim: {
   //     Swiper: ['jquery']
-  // },
-  // baseUrl: './src',
+  // }
   paths: {
     jquery: '../../../lib/jquery.min',
     Swiper: '../../../lib/swiper/js/swiper.min',
     service: '../../Service/service',
-    tpl: '../../../js/template/tpl'
+    tpl: '../../template/tpl'
   }
 });
 
@@ -33,7 +32,7 @@ require(['jquery', 'Swiper', 'service', 'tpl'], function ($, Swiper, service, tp
   function getStuIndexPageData() {
     service.getStuIndexPageData(function (data) {
       let LogoImg = {
-        loginImg: data[1].img_src.loginImg,
+        logoImg: data[1].img_src.loginImg,
         // swiperImg: data[0].img_src.swiperImg.swiper_src,
         userName: data[0].userInfo[0].TuserName,
         teacher: data[0].userInfo[0].student,

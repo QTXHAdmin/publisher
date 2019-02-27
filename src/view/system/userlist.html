@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="../../lib/bulma.min.css"> -->
+  <link rel="stylesheet" href="../../lib/jquery-easyui/themes/icon.css">
+  <link rel="stylesheet" href="../../lib/jquery-easyui/themes/bootstrap/easyui.css">
+  <link rel="stylesheet" href="../../style/main.css">
+</head>
+
+<body>
+  <table id="table">
+  </table>
+
+  <div id="addDialog" style="display: none">
+    <form action="" id="addForm">
+      <table style="margin: 20px">
+        <tr>
+          <td>用户名</td>
+          <td>
+            <input type="text" name="userName">
+          </td>
+        </tr>
+        <tr>
+          <td>姓名</td>
+          <td>
+            <input type="text" name="name">
+          </td>
+        </tr>
+        <tr>
+          <td>邮箱</td>
+          <td>
+            <input type="email" name="email">
+          </td>
+        </tr>
+        <tr>
+          <td>手机</td>
+          <td>
+            <input type="text" name="telephone">
+          </td>
+        </tr>
+        <tr>
+          <td>课程数</td>
+          <td>
+            <input type="number" name="courseNum">
+          </td>
+        </tr>
+        <tr>
+          <td>开课中</td>
+          <td>
+            <input type="number" name="courseTakingNum">
+          </td>
+        </tr>
+        <tr>
+          <td>教师身份</td>
+          <td>
+            <label>
+              <input type="radio" name="teacherIdentity" value="true">有</label>
+            <label>
+              <input type="radio" name="teacherIdentity" value="false">无</label>
+          </td>
+        </tr>
+        <tr>
+          <td>用户状态</td>
+          <td>
+            <label>
+              <input type="radio" name="status" value="true">已激活</label>
+            <label>
+              <input type="radio" name="status" value="false">未激活</label>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+  <script src="../../lib/require.js" data-main="../../js/Controller/system/userList.js"></script>
+</body>
+
+</html>

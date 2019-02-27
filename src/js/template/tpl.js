@@ -183,7 +183,7 @@ $out+='" alt="">\r\n      </div>\r\n      <div class="search-wrap">\r\n        <
 $out+=$escape(userName);
 $out+='</span>\r\n          <i class="icon iconfont icon-drop-down"></i>\r\n          <ul class="option-drop-list">\r\n            <li>\r\n              <a href="#">我的资源</a>\r\n            </li>\r\n            <li>\r\n              <a href="#">我的订单</a>\r\n            </li>\r\n            <li>\r\n              <a href="#">个人资料</a>\r\n            </li>\r\n            <li>\r\n              <a href="#">退出登录</a>\r\n            </li>\r\n          </ul>\r\n        </div>\r\n        <div class="stu-or-teacher">\r\n          <span>';
 $out+=$escape(teacher);
-$out+='</span>\r\n          <i class="icon iconfont icon-drop-down"></i>\r\n          <ul class="choose-drop-list">\r\n            <li>学生端</li>\r\n            <li>教师端</li>\r\n          </ul>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class="top-nav-wrap">\r\n    <div class="top-nav-con">\r\n      <div class="top-nav-con-l">\r\n        <ul class="nav-list">\r\n          <li class="cur">\r\n            <a href="#">首页</a>\r\n          </li>\r\n          <li>\r\n            <a href="#">课程</a>\r\n          </li>\r\n          <li>\r\n            <a href="#">教材</a>\r\n          </li>\r\n        </ul>\r\n        <span class="nav-sep">|</span>\r\n        <span class="myStudy">\r\n          <a href="#">我的教学</a>\r\n        </span>\r\n      </div>\r\n      <div class="top-nav-con-r">\r\n        <div class="clearfix">\r\n          <span class="invite-code">\r\n            <a href="#">通过课程邀请码加入课程</a>\r\n          </span>\r\n          <span class="nav-sep">|</span>\r\n          <span class="serial-number">\r\n            <a href="#">通过序列号获取资源权限</a>\r\n          </span>\r\n        </div>\r\n      </div>\r\n      <div class="special"></div>\r\n    </div>\r\n  </div>\r\n</div>\r\n';
+$out+='</span>\r\n          <i class="icon iconfont icon-drop-down"></i>\r\n          <ul class="choose-drop-list">\r\n            <li>学生端</li>\r\n            <li>教师端</li>\r\n          </ul>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class="top-nav-wrap">\r\n    <div class="top-nav-con">\r\n      <div class="top-nav-con-l">\r\n        <ul class="nav-list">\r\n          <li class="cur">\r\n            <a href="#">首页</a>\r\n          </li>\r\n          <li>\r\n            <a href="http://localhost:30000/view/student/module.html">课程</a>\r\n          </li>\r\n          <li>\r\n            <a href="#">教材</a>\r\n          </li>\r\n        </ul>\r\n        <span class="nav-sep">|</span>\r\n        <span class="myStudy">\r\n          <a href="#">我的教学</a>\r\n        </span>\r\n      </div>\r\n      <div class="top-nav-con-r">\r\n        <div class="clearfix">\r\n          <span class="invite-code">\r\n            <a href="#">通过课程邀请码加入课程</a>\r\n          </span>\r\n          <span class="nav-sep">|</span>\r\n          <span class="serial-number">\r\n            <a href="#">通过序列号获取资源权限</a>\r\n          </span>\r\n        </div>\r\n      </div>\r\n      <div class="special"></div>\r\n    </div>\r\n  </div>\r\n</div>\r\n';
 return new String($out);
 });/*v:1*/
 template('Lessons',function($data,$filename
@@ -196,6 +196,27 @@ $out+=$escape($value.title);
 $out+='</span>\n    </a>\n</li>\n';
 });
 $out+='\n';
+return new String($out);
+});/*v:1*/
+template('systemDialog',function($data,$filename
+/*``*/) {
+'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,$value=$data.$value,$out='';$out+='<table>\r\n  <tr>\r\n    <td>用户名</td>\r\n    <td>\r\n      <input type="text" name="userName" value="';
+$out+=$escape($value.userName);
+$out+='">\r\n    </td>\r\n  </tr>\r\n  <tr>\r\n    <td>姓名</td>\r\n    <td>\r\n      <input type="text" name="name" value="';
+$out+=$escape($value.name);
+$out+='">\r\n    </td>\r\n  </tr>\r\n  <tr>\r\n    <td>邮箱</td>\r\n    <td>\r\n      <input type="email" name="email" value="';
+$out+=$escape($value.email);
+$out+='">\r\n    </td>\r\n  </tr>\r\n  <tr>\r\n    <td>手机</td>\r\n    <td>\r\n      <input type="text" name="telephone" value="';
+$out+=$escape($value.telephone);
+$out+='">\r\n    </td>\r\n  </tr>\r\n  <tr>\r\n    <td>课程数</td>\r\n    <td>\r\n      <input type="number" name="courseNum" value="';
+$out+=$escape($value.courseNum);
+$out+='">\r\n    </td>\r\n  </tr>\r\n  <tr>\r\n    <td>开课中</td>\r\n    <td>\r\n      <input type="number" name="courseTakingNum" value="';
+$out+=$escape($value.courseTakingNum);
+$out+='">\r\n    </td>\r\n  </tr>\r\n  <tr>\r\n    <td>教师身份</td>\r\n    <td>\r\n      <input type="radio" name="teacherIdentity" value="';
+$out+=$escape($value.teacherIdentity);
+$out+='">\r\n    </td>\r\n  </tr>\r\n  <tr>\r\n    <td>用户状态</td>\r\n    <td>\r\n      <input type="radio" name="status" value="';
+$out+=$escape($value.status);
+$out+='">\r\n    </td>\r\n  </tr>\r\n</table>\r\n';
 return new String($out);
 });
 

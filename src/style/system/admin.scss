@@ -1,0 +1,37 @@
+.easyui-accordion{
+  .panel{
+    margin-bottom: 0;
+  }
+  li{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    a{
+      color: #1a1a1a;
+    }
+  }
+}
+
+.layout-panel-south{
+  .panel-body{
+    text-align: center;
+    line-height: 65px;
+  }
+}
+
+.layout-panel-north{
+  img.logo{
+    margin-top: 7px;
+    width: 307px;
+    height: 50px;
+  }
+  .user-option{
+    float: right;
+    line-height: 65px;
+    font-size: 14px;
+    margin-right: 10px;
+    a{
+      color: #1a1a1a;
+    }
+  }
+}

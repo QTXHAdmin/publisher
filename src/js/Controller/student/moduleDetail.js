@@ -2,22 +2,24 @@ require.config({
   paths: {
     jquery: '../../../lib/jquery.min',
     service: '../../Service/service',
-    tpl: '../../template/tpl'
+    Cookies: '../../../lib/js.cookie',
+    ajaxSetup: '../../../js/Controller/student/ajaxSetup',
+    tpl: '../../../js/template/tpl'
   }
 })
 
-require(['jquery', 'service', 'tpl'], function ($, service, tpl) {
+require(['jquery', 'service','Cookies', 'ajaxSetup', 'tpl'], function ($, service,Cookies, ajaxSetup, tpl) {
   $(function () {
     initHeader();
   })
 
   function initHeader() {
-    service.getStuIndexPageData(function (data) {
+    service.getStuIndexPageData(function (retData) {
       let LogoImg = {
-        logoImg: data[1].img_src.loginImg,
+        logoImg: retData.data[1].img_src.loginImg,
         // swiperImg: data.img_src.swiperImg,
-        userName: data[0].userInfo[0].TuserName,
-        teacher: data[0].userInfo[0].student,
+        userName: retData.data[0].userInfo[0].TuserName,
+        teacher: retData.data[0].userInfo[0].student,
         // userImg: data.img_src.userImg
       }
       $('.header-wrap').html(tpl('Header', LogoImg));

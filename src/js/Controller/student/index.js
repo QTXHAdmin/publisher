@@ -34,7 +34,7 @@ require(['jquery', 'Swiper', 'service','Cookies', 'ajaxSetup', 'tpl'], function 
   function getStuIndexPageData() {
     service.getStuIndexPageData(function (retData) {
       let LogoImg = {
-        loginImg: retData.data[1].img_src.loginImg,
+        logoImg: retData.data[1].img_src.loginImg,
         // swiperImg: data[0].img_src.swiperImg.swiper_src,
         userName: retData.data[0].userInfo[0].TuserName,
         teacher: retData.data[0].userInfo[0].student,

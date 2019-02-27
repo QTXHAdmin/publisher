@@ -16,7 +16,7 @@ require(['jquery', 'service','Cookies', 'ajaxSetup', 'tpl'], function ($, servic
   function initHeader() {
     service.getStuIndexPageData(function (retData) {
       let LogoImg = {
-        loginImg: retData.data[1].img_src.loginImg,
+        logoImg: retData.data[1].img_src.loginImg,
         // swiperImg: data.img_src.swiperImg,
         userName: retData.data[0].userInfo[0].TuserName,
         teacher: retData.data[0].userInfo[0].student,

@@ -1,7 +1,7 @@
 require.config({
-  shim: {
-      ajaxSetup: ['Cookies']
-  },
+  // shim: {
+  //     ajaxSetup: ['Cookies']
+  // },
   paths: {
     jquery: '../../../lib/jquery.min',
     Swiper: '../../../lib/swiper/js/swiper.min',
@@ -32,12 +32,12 @@ require(['jquery', 'Swiper', 'service','Cookies', 'ajaxSetup', 'tpl'], function 
   }
 
   function getStuIndexPageData() {
-    service.getStuIndexPageData(function (data) {
+    service.getStuIndexPageData(function (retData) {
       let LogoImg = {
-        loginImg: data[1].img_src.loginImg,
+        loginImg: retData.data[1].img_src.loginImg,
         // swiperImg: data[0].img_src.swiperImg.swiper_src,
-        userName: data[0].userInfo[0].TuserName,
-        teacher: data[0].userInfo[0].student,
+        userName: retData.data[0].userInfo[0].TuserName,
+        teacher: retData.data[0].userInfo[0].student,
         // userImg: data[0].img_src.userImg
       }
       $('.header-wrap').html(tpl('Header', LogoImg));

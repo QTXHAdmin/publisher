@@ -20,6 +20,13 @@ server.post('/authorize', (req, res) => {
   }
 });
 
+server.use((req, res, next) => {
+  if (req.method === 'POST') {
+    req.body.id = Date.now();
+  }
+  next();
+});
+
 router.render = (req, res) => {
   res.jsonp({
     msg: '请求成功',

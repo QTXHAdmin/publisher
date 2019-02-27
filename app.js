@@ -3,7 +3,7 @@ var Mock = require('mockjs');
 module.exports = () => {
   var data = Mock.mock({
     'users|3000': [{
-      'userID|+1': 1000,
+      'id|+1': 1000,
       'userName': '@title(1)',
       'name': '@cname',
       'email': '@email',

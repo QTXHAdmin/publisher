@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="../../lib/bulma.min.css">
+  <!-- <link rel="stylesheet" href="../../lib/bulma.min.css"> -->
+  <link rel="stylesheet" href="../../assets/font/font_5cho1wkdqgy/iconfont.css">
   <link rel="stylesheet" href="../../lib/jquery-easyui/themes/icon.css">
   <link rel="stylesheet" href="../../lib/jquery-easyui/themes/bootstrap/easyui.css">
   <link rel="stylesheet" href="../../style/main.css">
@@ -14,7 +15,14 @@
 
 <body class="easyui-layout" id="cc">
   <div data-options="region:'north',split:true" style="height:70px;">
-    <h3 class="title is-3" style="line-height: 60px">出版社后台管理系统</h3>
+    <!-- <h3 style="line-height: 60px" class="system-title">出版社后台管理系统</h3> -->
+    <img src="../../assets/image/logo.png" class="logo" alt="">
+    <div class="user-option">
+      <span class="user-name">张三</span>
+      <i class="icon iconfont icon-drop-down"></i>
+      <a href="#">[退出]</a>
+    </div>
+
   </div>
   <div data-options="region:'south',split:true" style="height:70px;">
     Copyrignt © 2004-2016 哈尔滨工业大学出版社 版权所有 京ICP备11017824号-7
@@ -67,7 +75,7 @@
   </div>
   <div data-options="region:'center'" style="background:#eee;">
     <div id="tt" class="easyui-tabs" data-options="fit:true">
-      <div title="欢迎页面" data-options="closable:true" style="padding:20px;display:none;">
+      <div title="欢迎页面" data-options="closable:true,fit:true" style="padding:20px;display:none;">
         欢迎使用
       </div>
     </div>

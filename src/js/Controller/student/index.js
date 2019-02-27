@@ -1,17 +1,18 @@
 require.config({
-  // shim: {
-  //     Swiper: ['jquery']
-  // },
-  // baseUrl: './src',
+  shim: {
+      ajaxSetup: ['Cookies']
+  },
   paths: {
     jquery: '../../../lib/jquery.min',
     Swiper: '../../../lib/swiper/js/swiper.min',
     service: '../../Service/service',
+    Cookies: '../../../lib/js.cookie',
+    ajaxSetup: '../../../js/Controller/student/ajaxSetup',
     tpl: '../../../js/template/tpl'
   }
 });
 
-require(['jquery', 'Swiper', 'service', 'tpl'], function ($, Swiper, service, tpl) {
+require(['jquery', 'Swiper', 'service','Cookies', 'ajaxSetup', 'tpl'], function ($, Swiper, service,Cookies, ajaxSetup, tpl) {
   $(function () {
 
     getStuIndexPageData();

@@ -2,7 +2,7 @@ define(['jquery'], function ($) {
   return {
     getTeacherHomeInfo: function (callback) {
       $.ajax({
-        url: 'http://localhost:45550/a',
+        url: 'http://localhost:45550/api/a',
         type: 'GET',
         data: '',
         success: callback
@@ -10,7 +10,7 @@ define(['jquery'], function ($) {
     },
     getStuIndexPageData: function (callback) {
       $.ajax({
-        url: 'http://localhost:45550/a',
+        url: 'http://localhost:45550/api/a',
         type: 'GET',
         data: '',
         dataType: 'json',

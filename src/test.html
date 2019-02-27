@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/jquery-easyui/themes/icon.css">
+  <link rel="stylesheet" href="./style/main.css">
+</head>
+
+<body>
+  <table id="datagrid" style="width: 400px"></table>
+  <script src="./lib/jquery.min.js"></script>
+  <script src="./lib/jquery-easyui/jquery.easyui.min.js"></script>
+  <script>
+    $(function(){
+      initTable()
+    })
+    function initTable() {
+      console.log(11111);
+      $('#datagrid').datagrid({
+        title: '用户列表',
+        fit: true,
+        url: 'http://localhost:45550/api/users',
+        method: 'GET',
+        columns: [
+          { field: 'ck', checkbox: true, width: 50 },
+          { field: 'userID', title: '用户ID', width: 120 },
+          { field: 'userName', title: '用户名', width: 120 },
+          { field: 'name', title: '姓名', width: 120 },
+          { field: 'email', title: '邮箱', width: 120 },
+          { field: 'telephone', title: '手机', width: 120 },
+          { field: 'courseNum', title: '课程数', width: 120 },
+          { field: 'courseTakingNum', title: '开课中', width: 120 },
+          {
+            field: 'teacherIdentity', title: '教师身份', width: 120, formatter: function (value, row, index) {
+              if (value == true) {
+                return '有'
+              } else {
+                return '--'
+              }
+            }
+          },
+          {
+            field: 'status', title: '用户状态', formatter: function (value, row, index) {
+              if (value == true) {
+                return '已激活'
+              } else {
+                return '未激活'
+              }
+            }
+          }
+        ],
+        toolbars: [{
+          iconCls: 'icon-edit',
+          title: '修改'
+        }]
+      })
+      console.log(11111);
+    }
+  </script>
+</body>
+
+</html>

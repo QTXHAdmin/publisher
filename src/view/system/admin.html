@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../lib/bulma.min.css">
+  <link rel="stylesheet" href="../../lib/jquery-easyui/themes/icon.css">
+  <link rel="stylesheet" href="../../lib/jquery-easyui/themes/bootstrap/easyui.css">
+  <link rel="stylesheet" href="../../style/main.css">
+</head>
+
+<body class="easyui-layout" id="cc">
+  <div data-options="region:'north',split:true" style="height:70px;">
+    <h3 class="title is-3" style="line-height: 60px">出版社后台管理系统</h3>
+  </div>
+  <div data-options="region:'south',split:true" style="height:70px;">
+    Copyrignt © 2004-2016 哈尔滨工业大学出版社 版权所有 京ICP备11017824号-7
+  </div>
+  <div data-options="region:'west',title:'菜单栏',split:true" style="width:200px;">
+    <div id="aa" class="easyui-accordion">
+      <div title="用户管理" data-options="iconCls:'icon-ok'">
+        <ul class="option-list user-option-list">
+          <li>
+            <a href="#" id="personal-user">个人用户管理</a>
+          </li>
+          <li>
+            <a href="#">教师认证管理</a>
+          </li>
+          <li>
+            <a href="#">管理员管理</a>
+          </li>
+        </ul>
+      </div>
+      <div title="资源管理" data-options="iconCls:'icon-ok'">
+        <ul class="option-list resource-option-list">
+          <li>
+            <a href="#">题型管理</a>
+          </li>
+          <li>
+            <a href="#">知识体系管理</a>
+          </li>
+          <li>
+            <a href="#">教材管理</a>
+          </li>
+          <li>
+            <a href="#">课件管理</a>
+          </li>
+          <li>
+            <a href="#">习题管理</a>
+          </li>
+        </ul>
+      </div>
+      <div title="课程包管理" data-options="iconCls:'icon-ok'">
+        <ul class="option-list course-option-list">
+          <li>
+            <a href="#">课程包分类管理</a>
+          </li>
+          <li>
+            <a href="#">课程包内容管理</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div data-options="region:'center'" style="background:#eee;">
+    <div id="tt" class="easyui-tabs" data-options="fit:true">
+      <div title="欢迎页面" data-options="closable:true" style="padding:20px;display:none;">
+        欢迎使用
+      </div>
+    </div>
+  </div>
+  <script src="../../lib/require.js" data-main="../../js/Controller/system/admin.js"></script>
+</body>
+
+</html>

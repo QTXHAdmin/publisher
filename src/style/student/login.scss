@@ -1,11 +1,17 @@
-body {
-    background-color: rgb(86, 156, 189);
+html, body{
+  width: 100%;
+  height: 100%;
 }
 
-.main {
+.login-wrap{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(86, 156, 189);
+  padding-top: 30px;
+  .main {
     width: 500px;
     height: 400px;
-    margin: 30px auto 0;
+    margin: 0 auto;
     padding: 30px 15px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -68,4 +74,7 @@ body {
             cursor: pointer;
         }
     }
+  }
 }
+
+

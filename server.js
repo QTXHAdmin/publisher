@@ -20,6 +20,21 @@ server.post('/authorize', (req, res) => {
   }
 });
 
+server.use((req, res, next) => {
+  if (req.method === 'POST') {
+    req.body.id = Date.now();
+  }
+  next();
+});
+
+router.render = (req, res) => {
+  res.jsonp({
+    msg: '请求成功',
+    code: 1,
+    data: res.locals.data
+  });
+};
+
 server.use('/api', (req, res, next) => {
   if (req.get('Authorization')) {
     next();
@@ -28,7 +43,7 @@ server.use('/api', (req, res, next) => {
   }
 });
 
-server.use(router);
+server.use('/api', router);
 
 server.listen(45550, () => {
   console.log('JSON Server is running');

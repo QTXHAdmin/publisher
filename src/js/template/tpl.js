@@ -177,13 +177,13 @@
     /*v:1*/
 template('Header',function($data,$filename
 /*``*/) {
-'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,logoImg=$data.logoImg,userName=$data.userName,teacher=$data.teacher,$out='';$out+='<div class="header">\n  <div class="top-logo-wrap">\n    <div class="top-logo-con">\n      <div class="logo">\n        <img class="logoImg" src="';
+'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,logoImg=$data.logoImg,userName=$data.userName,teacher=$data.teacher,$out='';$out+='<div class="header">\r\n  <div class="top-logo-wrap">\r\n    <div class="top-logo-con">\r\n      <div class="logo">\r\n        <img class="logoImg" src="';
 $out+=$escape(logoImg);
-$out+='" alt="">\n      </div>\n      <div class="search-wrap">\n        <div class="course-or-textbook">\n          <span>课程</span>\n          <i class="icon iconfont icon-drop-down"></i>\n          <ul class="choose-search-category">\n            <li>课程</li>\n            <li>教材</li>\n          </ul>\n        </div>\n        <input type="text" name="searchCon" class="searchCon">\n        <i class="icon iconfont icon-fangdajing searchBtn"></i>\n      </div>\n      <div class="userinfo-wrap">\n        <div class="msg-box">\n          <i class="icon iconfont icon-xiaoxi"></i>\n        </div>\n        <div class="user-option">\n          <img src="/assets/img/bookCover.png" alt="">\n          <span class="user-name">';
+$out+='" alt="">\r\n      </div>\r\n      <div class="search-wrap">\r\n        <div class="course-or-textbook">\r\n          <span>课程</span>\r\n          <i class="icon iconfont icon-drop-down"></i>\r\n          <ul class="choose-search-category">\r\n            <li>课程</li>\r\n            <li>教材</li>\r\n          </ul>\r\n        </div>\r\n        <input type="text" name="searchCon" class="searchCon">\r\n        <i class="icon iconfont icon-fangdajing searchBtn"></i>\r\n      </div>\r\n      <div class="userinfo-wrap">\r\n        <div class="msg-box">\r\n          <i class="icon iconfont icon-xiaoxi"></i>\r\n        </div>\r\n        <div class="user-option">\r\n          <img src="/assets/img/bookCover.png" alt="">\r\n          <span class="user-name">';
 $out+=$escape(userName);
-$out+='</span>\n          <i class="icon iconfont icon-drop-down"></i>\n          <ul class="option-drop-list">\n            <li>\n              <a href="#">我的资源</a>\n            </li>\n            <li>\n              <a href="#">我的订单</a>\n            </li>\n            <li>\n              <a href="#">个人资料</a>\n            </li>\n            <li>\n              <a href="#">退出登录</a>\n            </li>\n          </ul>\n        </div>\n        <div class="stu-or-teacher">\n          <span>';
+$out+='</span>\r\n          <i class="icon iconfont icon-drop-down"></i>\r\n          <ul class="option-drop-list">\r\n            <li>\r\n              <a href="#">我的资源</a>\r\n            </li>\r\n            <li>\r\n              <a href="#">我的订单</a>\r\n            </li>\r\n            <li>\r\n              <a href="#">个人资料</a>\r\n            </li>\r\n            <li>\r\n              <a href="#">退出登录</a>\r\n            </li>\r\n          </ul>\r\n        </div>\r\n        <div class="stu-or-teacher">\r\n          <span>';
 $out+=$escape(teacher);
-$out+='</span>\n          <i class="icon iconfont icon-drop-down"></i>\n          <ul class="choose-drop-list">\n            <li>学生端</li>\n            <li>教师端</li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class="top-nav-wrap">\n    <div class="top-nav-con">\n      <div class="top-nav-con-l">\n        <ul class="nav-list">\n          <li class="cur">\n            <a href="#">首页</a>\n          </li>\n          <li>\n            <a href="http://localhost:30000/view/student/module.html">课程</a>\n          </li>\n          <li>\n            <a href="#">教材</a>\n          </li>\n        </ul>\n        <span class="nav-sep">|</span>\n        <span class="myStudy">\n          <a href="#">我的教学</a>\n        </span>\n      </div>\n      <div class="top-nav-con-r">\n        <div class="clearfix">\n          <span class="invite-code">\n            <a href="#">通过课程邀请码加入课程</a>\n          </span>\n          <span class="nav-sep">|</span>\n          <span class="serial-number">\n            <a href="#">通过序列号获取资源权限</a>\n          </span>\n        </div>\n      </div>\n      <div class="special"></div>\n    </div>\n  </div>\n</div>\n';
+$out+='</span>\r\n          <i class="icon iconfont icon-drop-down"></i>\r\n          <ul class="choose-drop-list">\r\n            <li>学生端</li>\r\n            <li>教师端</li>\r\n          </ul>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class="top-nav-wrap">\r\n    <div class="top-nav-con">\r\n      <div class="top-nav-con-l">\r\n        <ul class="nav-list">\r\n          <li class="cur">\r\n            <a href="#">首页</a>\r\n          </li>\r\n          <li>\r\n            <a href="http://localhost:30000/view/student/module.html">课程</a>\r\n          </li>\r\n          <li>\r\n            <a href="#">教材</a>\r\n          </li>\r\n        </ul>\r\n        <span class="nav-sep">|</span>\r\n        <span class="myStudy">\r\n          <a href="#">我的教学</a>\r\n        </span>\r\n      </div>\r\n      <div class="top-nav-con-r">\r\n        <div class="clearfix">\r\n          <span class="invite-code">\r\n            <a href="#">通过课程邀请码加入课程</a>\r\n          </span>\r\n          <span class="nav-sep">|</span>\r\n          <span class="serial-number">\r\n            <a href="#">通过序列号获取资源权限</a>\r\n          </span>\r\n        </div>\r\n      </div>\r\n      <div class="special"></div>\r\n    </div>\r\n  </div>\r\n</div>\r\n';
 return new String($out);
 });/*v:1*/
 template('Lessons',function($data,$filename
@@ -200,23 +200,33 @@ return new String($out);
 });/*v:1*/
 template('systemDialog',function($data,$filename
 /*``*/) {
-'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,$value=$data.$value,$out='';$out+='<table>\n  <tr>\n    <td>用户名</td>\n    <td>\n      <input type="text" name="userName" value="';
-$out+=$escape($value.userName);
-$out+='">\n    </td>\n  </tr>\n  <tr>\n    <td>姓名</td>\n    <td>\n      <input type="text" name="name" value="';
-$out+=$escape($value.name);
-$out+='">\n    </td>\n  </tr>\n  <tr>\n    <td>邮箱</td>\n    <td>\n      <input type="email" name="email" value="';
-$out+=$escape($value.email);
-$out+='">\n    </td>\n  </tr>\n  <tr>\n    <td>手机</td>\n    <td>\n      <input type="text" name="telephone" value="';
-$out+=$escape($value.telephone);
-$out+='">\n    </td>\n  </tr>\n  <tr>\n    <td>课程数</td>\n    <td>\n      <input type="number" name="courseNum" value="';
-$out+=$escape($value.courseNum);
-$out+='">\n    </td>\n  </tr>\n  <tr>\n    <td>开课中</td>\n    <td>\n      <input type="number" name="courseTakingNum" value="';
-$out+=$escape($value.courseTakingNum);
-$out+='">\n    </td>\n  </tr>\n  <tr>\n    <td>教师身份</td>\n    <td>\n      <input type="radio" name="teacherIdentity" value="';
-$out+=$escape($value.teacherIdentity);
-$out+='">\n    </td>\n  </tr>\n  <tr>\n    <td>用户状态</td>\n    <td>\n      <input type="radio" name="status" value="';
-$out+=$escape($value.status);
-$out+='">\n    </td>\n  </tr>\n</table>\n';
+'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,id=$data.id,userName=$data.userName,name=$data.name,email=$data.email,telephone=$data.telephone,courseNum=$data.courseNum,courseTakingNum=$data.courseTakingNum,teacherIdentity=$data.teacherIdentity,status=$data.status,$out='';$out+='<form action="" id="editForm">\n  <table style="margin: 20px">\n    <tr>\n      <input type="hidden" name="id" value=';
+$out+=$escape(id);
+$out+='>\n    </tr>\n    <tr>\n      <td>用户名</td>\n      <td>\n        <input type="text" name="userName" value="';
+$out+=$escape(userName);
+$out+='">\n      </td>\n    </tr>\n    <tr>\n      <td>姓名</td>\n      <td>\n        <input type="text" name="name" value="';
+$out+=$escape(name);
+$out+='">\n      </td>\n    </tr>\n    <tr>\n      <td>邮箱</td>\n      <td>\n        <input type="email" name="email" value="';
+$out+=$escape(email);
+$out+='">\n      </td>\n    </tr>\n    <tr>\n      <td>手机</td>\n      <td>\n        <input type="text" name="telephone" value="';
+$out+=$escape(telephone);
+$out+='">\n      </td>\n    </tr>\n    <tr>\n      <td>课程数</td>\n      <td>\n        <input type="number" name="courseNum" value="';
+$out+=$escape(courseNum);
+$out+='">\n      </td>\n    </tr>\n    <tr>\n      <td>开课中</td>\n      <td>\n        <input type="number" name="courseTakingNum" value="';
+$out+=$escape(courseTakingNum);
+$out+='">\n      </td>\n    </tr>\n    <tr>\n      <td>教师身份</td>\n      <td>\n        ';
+if(+teacherIdentity === 1){
+$out+='\n        <label>\n          <input type="radio" name="teacherIdentity" value="1" checked>有</label>\n          <input type="radio" name="teacherIdentity" value="0">无</label>\n          ';
+}else if(+teacherIdentity === 0){
+$out+='\n          <label>\n              <input type="radio" name="teacherIdentity" value="1">有</label>\n          <input type="radio" name="teacherIdentity" value="0" checked>无</label>\n        ';
+}
+$out+='\n      </td>\n    </tr>\n    <tr>\n      <td>用户状态</td>\n      <td>\n        ';
+if(+status=== 1){
+$out+='\n        <label>\n          <input type="radio" name="status" value="1" checked>已激活</label>\n          <input type="radio" name="status" value="0">未激活</label>\n          ';
+}else if(+status === 0){
+$out+='\n          <label>\n              <input type="radio" name="status" value="1">已激活</label>\n          <input type="radio" name="status" value="0" checked>未激活</label>\n        ';
+}
+$out+='\n      </td>\n    </tr>\n  </table>\n</form>\n';
 return new String($out);
 });
 

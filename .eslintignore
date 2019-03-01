@@ -1,4 +1,5 @@
 gulpfile.js
-/src/**/*.**
+/src/js/template/*.js
 dist/**/*.*
+lib/**/*.*
 *.html

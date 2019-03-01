@@ -13,9 +13,18 @@
 </head>
 
 <body>
-  <table id="table">
-  </table>
-
+  <div class="easyui-layout" style="width: 100%; height: 100%;">
+    <div data-options="region:'north'" style="width: 100%; height: 10%">
+      <input id="ss" style="width: 200px;"></input>
+      <div id="mm" style="width:120px">
+        <div data-options="name:'id',iconCls:'icon-ok'">用户ID</div>
+        <div data-options="name:'userName'">用户名</div>
+      </div>
+    </div>
+    <div data-options="region:'center'" style="width: 100%; height: 90%;">
+      <table id="table"></table>
+    </div>
+  </div>
   <div id="addDialog" style="display: none">
     <form action="" id="addForm">
       <table style="margin: 20px">
@@ -59,24 +68,24 @@
           <td>教师身份</td>
           <td>
             <label>
-              <input type="radio" name="teacherIdentity" value="true">有</label>
+              <input type="radio" name="teacherIdentity" value="1">有</label>
             <label>
-              <input type="radio" name="teacherIdentity" value="false">无</label>
+              <input type="radio" name="teacherIdentity" value="0">无</label>
           </td>
         </tr>
         <tr>
           <td>用户状态</td>
           <td>
             <label>
-              <input type="radio" name="status" value="true">已激活</label>
+              <input type="radio" name="status" value="1">已激活</label>
             <label>
-              <input type="radio" name="status" value="false">未激活</label>
+              <input type="radio" name="status" value="0">未激活</label>
           </td>
         </tr>
       </table>
     </form>
   </div>
-
+  <div id="viewDialog" style="display: none"></div>
   <script src="../../lib/require.js" data-main="../../js/Controller/system/userList.js"></script>
 </body>
 

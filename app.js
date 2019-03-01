@@ -10,8 +10,8 @@ module.exports = () => {
       'telephone': '@natural(13000000000, 1500000000000)',
       'courseNum': '@integer(10, 20)',
       'courseTakingNum': '@integer(0, 10)',
-      'teacherIdentity': '@boolean',
-      'status': '@boolean'
+      'teacherIdentity': '@integer(0,1)',
+      'status': '@integer(0,1)'
     }]
   });
   return data;

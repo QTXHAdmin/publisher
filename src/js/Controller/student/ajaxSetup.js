@@ -1,12 +1,12 @@
-define(['jquery', 'Cookies'], function ($, Cookies) {
+define(['jquery', 'Cookies'], function($, Cookies) {
   return $.ajaxSetup({
     headers: {
       'Authorization': Cookies.get('Authorization')
     },
     StatusCode: {
-      401: function () {
-        window.location.href = './systemLogin.html'
+      401: function() {
+        window.location.href = './systemLogin.html';
       }
     }
-  })
-})
+  });
+});

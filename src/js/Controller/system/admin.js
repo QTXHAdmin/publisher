@@ -1,16 +1,33 @@
 require.config({
   paths: {
     jquery: '../../../lib/jquery.min',
-    easyui: '../../../lib/jquery-easyui/jquery.easyui.min'
+    easyui: '../../../lib/jquery-easyui/jquery.easyui.min',
+    Cookies: '../../../lib/js.cookie'
   }
 });
 
-require(['jquery', 'easyui'], function($, easyui) {
+require(['jquery', 'easyui', 'Cookies'], function($, easyui, Cookies) {
   $(function() {
     initMenu();
 
     initAccordion();
+
+    bindExitEvent();
   });
+
+  function bindExitEvent() {
+    $('#exitBtn').on('click', function(e) {
+      e.preventDefault();
+      $.messager.confirm('提醒消息', '您确定要退出吗', function(r) {
+        if (!r) {
+          /* eslint-disable-next-line */
+          return;
+        }
+        window.location.href = 'http://localhost:30000/systemLogin.html';
+        Cookies.remove('Authorization');
+      });
+    });
+  }
 
   function initMenu() {
     $('#cc').layout();

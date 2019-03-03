@@ -32,7 +32,7 @@ require(['jquery', 'simplePagination', 'service', 'Cookies', 'ajaxSetup', 'tpl']
       };
       $('.header-wrap').html(tpl('Header', LogoImg));
       $('.top-nav-list').find('li').removeClass('cur');
-      $($('.top-nav-list').find('li')[1]).addClass('cur');
+      $($('.top-nav-list').find('li')[2]).addClass('cur');
     });
   }
 

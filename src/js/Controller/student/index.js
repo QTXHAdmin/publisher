@@ -12,9 +12,8 @@ require.config({
   }
 });
 
-require(['jquery', 'Swiper', 'service','Cookies', 'ajaxSetup', 'tpl'], function ($, Swiper, service,Cookies, ajaxSetup, tpl) {
-  $(function () {
-
+require(['jquery', 'Swiper', 'service', 'Cookies', 'ajaxSetup', 'tpl'], function($, Swiper, service, Cookies, ajaxSetup, tpl) {
+  $(function() {
     getStuIndexPageData();
     initBannerArea();
   });
@@ -32,15 +31,17 @@ require(['jquery', 'Swiper', 'service','Cookies', 'ajaxSetup', 'tpl'], function 
   }
 
   function getStuIndexPageData() {
-    service.getStuIndexPageData(function (retData) {
+    service.getStuIndexPageData(function(retData) {
       let LogoImg = {
         logoImg: retData.data[1].img_src.loginImg,
         // swiperImg: data[0].img_src.swiperImg.swiper_src,
         userName: retData.data[0].userInfo[0].TuserName,
-        teacher: retData.data[0].userInfo[0].student,
+        teacher: retData.data[0].userInfo[0].student
         // userImg: data[0].img_src.userImg
-      }
+      };
       $('.header-wrap').html(tpl('Header', LogoImg));
-    })
+      $('.top-nav-list').find('li').removeClass('cur');
+      $($('.top-nav-list').find('li')[0]).addClass('cur');
+    });
   }
 });

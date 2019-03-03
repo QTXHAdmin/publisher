@@ -31,7 +31,7 @@ require(['jquery', 'easyui', 'Cookies', 'ajaxSetup', 'tpl'], function($, easyui,
     $('#table').datagrid({
       title: '用户列表',
       fitColumns: true,
-      singleSelect: true,
+      // singleSelect: true,
       page: 1,
       itemsOnPage: 10,
       pagination: true,

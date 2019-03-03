@@ -1,0 +1,159 @@
+@import "../publicStyle/_base.scss";
+
+.myStudy[student]{
+  background-color: #fbfbfb;
+  .module-status-wrap{
+    width: 1190px;
+    height: 55px;
+    padding-top: 30px;
+    margin: 0 auto;
+    font-size: 14px;
+    .module-status{
+      float: left;
+      border: 1px solid #e7e7e7;
+      span{
+        width: 105px;
+        height: 35px;
+        border-radius: 2px;
+        text-align: center;
+        line-height: 35px;
+        float: left;
+        color: $moduleDetailMainFontColor;
+      }
+      .cur{
+        background-color: #2db0f9;
+        color: #fff;
+      }
+    }
+    .confirm-status{
+      float: right;
+      width: 70px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      background-color: #1bbc9c;
+      color: #fff;
+      border: 1px solid #6fd4c0;
+      border-radius: 2px;
+    }
+  }
+  .my-module-list{
+    width: 1190px;
+    margin: 0 auto;
+    li{
+      height: 210px;
+      border: 1px solid $moduleListBorderColor;
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 10px;
+      .module-cover{
+        float: left;
+        position: relative;
+        img{
+          width: 238px;
+          height: 203px;
+          border: 1px solid #c4c5c5;
+          vertical-align: top;
+        }
+        &::before{
+          content: '';
+          display: block;
+          width: 35px;
+          height: 35px;
+          border: 30px solid transparent;
+          border-bottom: 30px solid #e7594d;
+          position: absolute;
+          top: -47px;
+          left: -47px;
+          transform: rotateZ(-45deg);
+        }
+        &::after{
+          content: '待批准';
+          display: block;
+          font-size: 12px;
+          color: #fff;
+          position: absolute;
+          top: 20px;
+          left: 5px;
+          transform: rotateZ(-45deg);
+        }
+      }
+      .module-desc{
+        font-size: 14px;
+        color: $moduleDetailMainFontColor;
+        margin-left: 265px;
+        margin-right: 15px;
+        .module-name{
+          overflow: hidden;
+          margin-bottom: 30px;
+          a{
+            color: $moduleDetailTitleColor;
+            font-size: 16px;
+          }
+        }
+        .other-info{
+          overflow: hidden;
+          padding-bottom: 20px;
+          border-bottom: 1px solid $moduleListBorderColor;
+          .name-value{
+            float: left;
+            margin-right: 90px;
+            .name{
+              margin-right: 18px;
+            }
+          }
+          .res-num{
+            margin-right: 0;
+            margin-left: 65px;
+            .name{
+              margin-right: 10px;
+            }
+          }
+        }
+        .cancel-res{
+          margin-top: 88px;
+          width: 155px;
+          height: 35px;
+          line-height: 35px;
+          background-color: #2db0f9;
+          color: #fff;
+          text-align: center;
+          border: 1px solid #6bc7fb;
+          border-radius: 2px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .pagination-wrap{
+    width: 1190px;
+    margin: 0 auto;
+    height: 110px;
+    // line-height: 80px;
+    // padding-left: 30px;
+    .total-module{
+      float: left;
+      .total-module-num{
+        color: $highlightColor;
+        display: inline-block;
+        margin: 25px 5px;
+      }
+    }
+    .pagination{
+      float: right;
+      margin-top: 25px;
+      padding: 0 0;
+      li{
+        a{
+          border: none;
+        }
+      }
+      .active{
+        .current{
+          background-color: #2db0f9;
+          border: none;
+        }
+      }
+    }
+  }
+}

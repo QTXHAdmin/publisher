@@ -204,8 +204,8 @@
             .top-nav-con-l {
                 float: left;
                 width: 367px;
-                .nav-list {
-                    width: 249px;
+                .top-nav-list {
+                    width: 415px;
                     // margin-top: 15px;
                     float: left;
                     li {
@@ -216,6 +216,7 @@
                         text-align: center;
                         margin-right: 9px;
                         border-radius: 2px;
+                        color: #fff;
                         a {
                             color: #fff;
                             font-size: 14px;
@@ -223,21 +224,6 @@
                     }
                     li.cur {
                         background-color: #2db0f9;
-                    }
-                }
-                .nav-sep {
-                    color: #fff;
-                    margin-left: 11px;
-                    height: 30px;
-                    line-height: 30px;
-                }
-                .myStudy {
-                    font-size: 14px;
-                    float: right;
-                    height: 30px;
-                    line-height: 30px;
-                    a {
-                        color: #fff;
                     }
                 }
             }

@@ -95,7 +95,7 @@
         $escape: escapeHTML,
 
         $each: each
-
+        
     };
 
 
@@ -108,7 +108,7 @@
             name: 'Render Error',
             message: 'Template not found'
         });
-        return data ? fn(data) : fn;
+        return data ? fn(data) : fn; 
     };
 
 
@@ -150,7 +150,7 @@
             // 调试版本，直接给出模板语句行
             for (var name in e) {
                 message += "<" + name + ">\n" + e[name] + "\n\n";
-            }
+            }  
         }
 
         return function () {
@@ -173,7 +173,7 @@
 
 
     if (typeof define === 'function') {define(function() {return template;});} else if (typeof exports !== 'undefined') {module.exports = template;} else {this.template = template;}
-
+    
     /*v:1*/
 template('Header',function($data,$filename
 /*``*/) {
@@ -200,33 +200,33 @@ return new String($out);
 });/*v:1*/
 template('systemDialog',function($data,$filename
 /*``*/) {
-'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,id=$data.id,userName=$data.userName,name=$data.name,email=$data.email,telephone=$data.telephone,courseNum=$data.courseNum,courseTakingNum=$data.courseTakingNum,teacherIdentity=$data.teacherIdentity,status=$data.status,$out='';$out+='<form action="" id="editForm">\n  <table style="margin: 20px">\n    <tr>\n      <input type="hidden" name="id" value=';
+'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,id=$data.id,userName=$data.userName,name=$data.name,email=$data.email,telephone=$data.telephone,courseNum=$data.courseNum,courseTakingNum=$data.courseTakingNum,teacherIdentity=$data.teacherIdentity,status=$data.status,$out='';$out+='<form action="" id="editForm">\r\n  <table style="margin: 20px">\r\n    <tr>\r\n      <input type="hidden" name="id" value=';
 $out+=$escape(id);
-$out+='>\n    </tr>\n    <tr>\n      <td>用户名</td>\n      <td>\n        <input type="text" name="userName" value="';
+$out+='>\r\n    </tr>\r\n    <tr>\r\n      <td>用户名</td>\r\n      <td>\r\n        <input type="text" name="userName" value="';
 $out+=$escape(userName);
-$out+='">\n      </td>\n    </tr>\n    <tr>\n      <td>姓名</td>\n      <td>\n        <input type="text" name="name" value="';
+$out+='">\r\n      </td>\r\n    </tr>\r\n    <tr>\r\n      <td>姓名</td>\r\n      <td>\r\n        <input type="text" name="name" value="';
 $out+=$escape(name);
-$out+='">\n      </td>\n    </tr>\n    <tr>\n      <td>邮箱</td>\n      <td>\n        <input type="email" name="email" value="';
+$out+='">\r\n      </td>\r\n    </tr>\r\n    <tr>\r\n      <td>邮箱</td>\r\n      <td>\r\n        <input type="email" name="email" value="';
 $out+=$escape(email);
-$out+='">\n      </td>\n    </tr>\n    <tr>\n      <td>手机</td>\n      <td>\n        <input type="text" name="telephone" value="';
+$out+='">\r\n      </td>\r\n    </tr>\r\n    <tr>\r\n      <td>手机</td>\r\n      <td>\r\n        <input type="text" name="telephone" value="';
 $out+=$escape(telephone);
-$out+='">\n      </td>\n    </tr>\n    <tr>\n      <td>课程数</td>\n      <td>\n        <input type="number" name="courseNum" value="';
+$out+='">\r\n      </td>\r\n    </tr>\r\n    <tr>\r\n      <td>课程数</td>\r\n      <td>\r\n        <input type="number" name="courseNum" value="';
 $out+=$escape(courseNum);
-$out+='">\n      </td>\n    </tr>\n    <tr>\n      <td>开课中</td>\n      <td>\n        <input type="number" name="courseTakingNum" value="';
+$out+='">\r\n      </td>\r\n    </tr>\r\n    <tr>\r\n      <td>开课中</td>\r\n      <td>\r\n        <input type="number" name="courseTakingNum" value="';
 $out+=$escape(courseTakingNum);
-$out+='">\n      </td>\n    </tr>\n    <tr>\n      <td>教师身份</td>\n      <td>\n        ';
+$out+='">\r\n      </td>\r\n    </tr>\r\n    <tr>\r\n      <td>教师身份</td>\r\n      <td>\r\n        ';
 if(+teacherIdentity === 1){
-$out+='\n        <label>\n          <input type="radio" name="teacherIdentity" value="1" checked>有</label>\n          <input type="radio" name="teacherIdentity" value="0">无</label>\n          ';
+$out+='\r\n        <label>\r\n          <input type="radio" name="teacherIdentity" value="1" checked>有</label>\r\n          <input type="radio" name="teacherIdentity" value="0">无</label>\r\n          ';
 }else if(+teacherIdentity === 0){
-$out+='\n          <label>\n              <input type="radio" name="teacherIdentity" value="1">有</label>\n          <input type="radio" name="teacherIdentity" value="0" checked>无</label>\n        ';
+$out+='\r\n          <label>\r\n              <input type="radio" name="teacherIdentity" value="1">有</label>\r\n          <input type="radio" name="teacherIdentity" value="0" checked>无</label>\r\n        ';
 }
-$out+='\n      </td>\n    </tr>\n    <tr>\n      <td>用户状态</td>\n      <td>\n        ';
+$out+='\r\n      </td>\r\n    </tr>\r\n    <tr>\r\n      <td>用户状态</td>\r\n      <td>\r\n        ';
 if(+status=== 1){
-$out+='\n        <label>\n          <input type="radio" name="status" value="1" checked>已激活</label>\n          <input type="radio" name="status" value="0">未激活</label>\n          ';
+$out+='\r\n        <label>\r\n          <input type="radio" name="status" value="1" checked>已激活</label>\r\n          <input type="radio" name="status" value="0">未激活</label>\r\n          ';
 }else if(+status === 0){
-$out+='\n          <label>\n              <input type="radio" name="status" value="1">已激活</label>\n          <input type="radio" name="status" value="0" checked>未激活</label>\n        ';
+$out+='\r\n          <label>\r\n              <input type="radio" name="status" value="1">已激活</label>\r\n          <input type="radio" name="status" value="0" checked>未激活</label>\r\n        ';
 }
-$out+='\n      </td>\n    </tr>\n  </table>\n</form>\n';
+$out+='\r\n      </td>\r\n    </tr>\r\n  </table>\r\n</form>\r\n';
 return new String($out);
 });
 

@@ -17,6 +17,8 @@ require(['jquery', 'simplePagination', 'service', 'Cookies', 'ajaxSetup', 'tpl']
     getMyStudyHeader();
 
     initPagination();
+
+    getCourseTakingNum();
   });
 
   function initPagination() {
@@ -40,6 +42,14 @@ require(['jquery', 'simplePagination', 'service', 'Cookies', 'ajaxSetup', 'tpl']
       $('.header-wrap').html(tpl('Header', logoImg));
       $('.top-nav-list').find('li').removeClass('cur');
       $($('.top-nav-list').find('li')[4]).addClass('cur');
+    });
+  }
+
+  function getCourseTakingNum() {
+    var id = Cookies.get('userID');
+    service.getMyStudyCourseTakingNum(id, function(retData) {
+      var courseTakingNum = retData.data.courseTakingNum;
+      $('.total-module-num').text(courseTakingNum);
     });
   }
 });

@@ -9,8 +9,8 @@ require.config({
   }
 });
 
-require(['jquery', 'Swiper','Cookies','ajaxSetup', 'tpl', 'service'], function ($, Swiper,Cookies,ajaxSetup, tpl, service) {
-  $(function () {
+require(['jquery', 'Swiper', 'Cookies', 'ajaxSetup', 'tpl', 'service'], function($, Swiper, Cookies, ajaxSetup, tpl, service) {
+  $(function() {
     initBannerArea();
     getteacherhomeinfo();
   });
@@ -28,14 +28,14 @@ require(['jquery', 'Swiper','Cookies','ajaxSetup', 'tpl', 'service'], function (
   }
 
   function getteacherhomeinfo() {
-    service.getTeacherHomeInfo(function (retData) {
+    service.getTeacherHomeInfo(function(retData) {
       let a = {
         logoImg: retData.data[1].img_src.loginImg,
         swiperImg: retData.data[1].img_src.swiperImg,
         userName: retData.data[0].userInfo[1].SuserName,
         teacher: retData.data[0].userInfo[1].teacher,
         lessons: retData.data[2].lessons
-      }
+      };
       let lessonItem = a.lessons;
       $('.swiperImg1').attr('src', a.swiperImg[0].swiper_src);
       $('.swiperImg2').attr('src', a.swiperImg[1].swiper_src);
@@ -45,7 +45,6 @@ require(['jquery', 'Swiper','Cookies','ajaxSetup', 'tpl', 'service'], function (
       console.log(a.swiperImg);
       console.log(lessonItem);
       console.log(lessonItem[0].img_src);
-
     });
   }
 });

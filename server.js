@@ -2,20 +2,21 @@ const jsonServer = require('json-server');
 const server = jsonServer.create();
 const middlewares = jsonServer.defaults();
 const router = jsonServer.router('./src/db.json');
+const service = require('./service.js');
 server.use(middlewares);
 
 server.use(jsonServer.bodyParser);
 
 server.post('/authorize', (req, res) => {
-  if (req.body.userName === 'YIQIAN' && req.body.password === 'WLU5PEbDkYrvMqyIrcU1DRm7itk') {
+  if (req.body.teacherIdentity) {
     res.jsonp({
-      code: 1,
-      msg: '验证成功'
+      category: 1,
+      data: service.verifyTeacherIdentity(req.body.userName, req.body.password)
     });
   } else {
     res.jsonp({
-      code: 0,
-      msg: '验证失败'
+      category: 2,
+      data: service.verifyStu(req.body.userName, req.body.password)
     });
   }
 });

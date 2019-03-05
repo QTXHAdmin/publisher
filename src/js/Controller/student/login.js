@@ -22,14 +22,23 @@ require(['jquery', 'sh1', 'easyui', 'cookie'], function($, sh1, easyui, Cookies)
         data: dataArr,
         dataType: 'json',
         success: function(resData) {
-          if (resData.code === 1) {
-            // console.log('登录成功');
-            // $.messager.alert('消息标题', '登录成功', 'info');
+          if (resData.category === 1) {
+            if (resData.data.code !== 1) {
+              $.messager.alert('消息标题', '登录失败，此账号没有教师权限', 'error');
+              return;
+            }
             Cookies.set('Authorization', dataArr[1]);
+            Cookies.set('userID', resData.data.id);
+            window.location.href = 'http://localhost:30000/api/view/teacher/t_home.html';
+          }
+          if (resData.category === 2) {
+            if (resData.data.code !== 1) {
+              $.messager.alert('消息标题', '登录失败，用户名和密码不匹配', 'error');
+              return;
+            }
+            Cookies.set('Authorization', dataArr[1]);
+            Cookies.set('userID', resData.data.id);
             window.location.href = 'http://localhost:30000/api/view/student/index.html';
-          } else {
-            // console.log('fail');
-            $.messager.alert('消息标题', '登录失败，用户名和密码不匹配', 'error');
           }
         }
       });

@@ -181,7 +181,7 @@ template('Header',function($data,$filename
 $out+=$escape(logoImg);
 $out+='" alt="">\n      </div>\n      <div class="search-wrap">\n        <div class="course-or-textbook">\n          <span>课程</span>\n          <i class="icon iconfont icon-drop-down"></i>\n          <ul class="choose-search-category">\n            <li>课程</li>\n            <li>教材</li>\n          </ul>\n        </div>\n        <input type="text" name="searchCon" class="searchCon">\n        <i class="icon iconfont icon-fangdajing searchBtn"></i>\n      </div>\n      <div class="userinfo-wrap">\n        <div class="msg-box">\n          <i class="icon iconfont icon-xiaoxi"></i>\n        </div>\n        <div class="user-option">\n          <img src="/assets/img/bookCover.png" alt="">\n          <span class="user-name">';
 $out+=$escape(userName);
-$out+='</span>\n          <i class="icon iconfont icon-drop-down"></i>\n          <ul class="option-drop-list">\n            <li>\n              <a href="#">我的资源</a>\n            </li>\n            <li>\n              <a href="#">我的订单</a>\n            </li>\n            <li>\n              <a href="#">个人资料</a>\n            </li>\n            <li>\n              <a href="#">退出登录</a>\n            </li>\n          </ul>\n        </div>\n        <div class="stu-or-teacher">\n          <span>';
+$out+='</span>\n          <i class="icon iconfont icon-drop-down"></i>\n          <ul class="option-drop-list">\n            <li>\n              <a href="#">我的资源</a>\n            </li>\n            <li>\n              <a href="#">我的订单</a>\n            </li>\n            <li>\n              <a href="#">个人资料</a>\n            </li>\n            <li>\n              <a href="http://localhost:30000/login.html">退出登录</a>\n            </li>\n          </ul>\n        </div>\n        <div class="stu-or-teacher">\n          <span>';
 $out+=$escape(teacher);
 $out+='</span>\n          <i class="icon iconfont icon-drop-down"></i>\n          <ul class="choose-drop-list">\n            <li>学生端</li>\n            <li>教师端</li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class="top-nav-wrap">\n    <div class="top-nav-con">\n      <div class="top-nav-con-l">\n        <ul class="top-nav-list">\n          <li class="cur">\n            <a href="http://localhost:30000/view/student/index.html">首页</a>\n          </li>\n          <li>\n            <a href="http://localhost:30000/view/student/module.html">课程</a>\n          </li>\n          <li>\n            <a href="http://localhost:30000/view/student/textbook.html">教材</a>\n          </li>\n        <li class="nav-sep">|</li>\n        <li class="myStudy">\n          <a href="http://localhost:30000/view/student/myStudy.html">我的学习</a>\n        </li>\n      </ul>\n      </div>\n      <div class="top-nav-con-r">\n        <div class="clearfix">\n          <span class="invite-code">\n            <a href="#">通过课程邀请码加入课程</a>\n          </span>\n          <span class="nav-sep">|</span>\n          <span class="serial-number">\n            <a href="#">通过序列号获取资源权限</a>\n          </span>\n        </div>\n      </div>\n      <div class="special"></div>\n    </div>\n  </div>\n</div>\n';
 return new String($out);
@@ -200,11 +200,11 @@ return new String($out);
 });/*v:1*/
 template('moduleNav',function($data,$filename
 /*``*/) {
-'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,parentCateName=$data.parentCateName,childCateName=$data.childCateName,$out='';$out+='<ul class="nav-list">\n    <li>\n      <a href="http://localhost:30000/api/view/student/index.html">首页</a>\n    </li>\n    <li class="sep">></li>\n    <li>\n      <a href="http://localhost:30000/api/view/student/module.html">课程</a>\n    </li>\n    <li class="sep">></li>\n    <li>\n      <a href="#">';
+'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,parentCateName=$data.parentCateName,childCateName=$data.childCateName,$out='';$out+='<ul class="nav-list">\r\n    <li>\r\n      <a href="http://localhost:30000/api/view/student/index.html">首页</a>\r\n    </li>\r\n    <li class="sep">></li>\r\n    <li>\r\n      <a href="http://localhost:30000/api/view/student/module.html">课程</a>\r\n    </li>\r\n    <li class="sep">></li>\r\n    <li>\r\n      <a href="#">';
 $out+=$escape(parentCateName);
-$out+='</a>\n    </li>\n    <li class="sep">></li>\n    <li class="cur-position">\n      <a href="#">';
+$out+='</a>\r\n    </li>\r\n    <li class="sep">></li>\r\n    <li class="cur-position">\r\n      <a href="#">';
 $out+=$escape(childCateName);
-$out+='</a>\n    </li>\n  </ul>\n';
+$out+='</a>\r\n    </li>\r\n  </ul>\r\n';
 return new String($out);
 });/*v:1*/
 template('systemDialog',function($data,$filename

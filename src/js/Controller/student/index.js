@@ -1,7 +1,4 @@
 require.config({
-  // shim: {
-  //     ajaxSetup: ['Cookies']
-  // },
   paths: {
     jquery: '../../../lib/jquery.min',
     Swiper: '../../../lib/swiper/js/swiper.min',
@@ -40,8 +37,6 @@ require(['jquery', 'Swiper', 'service', 'Cookies', 'ajaxSetup', 'tpl'], function
         // userImg: data[0].img_src.userImg
       };
       $('.header-wrap').html(tpl('Header', LogoImg));
-      $('.top-nav-list').find('li').removeClass('cur');
-      $($('.top-nav-list').find('li')[0]).addClass('cur');
     });
   }
 });

@@ -1,6 +1,7 @@
 require.config({
   paths: {
     jquery: '../../../lib/jquery.min',
+    easyui: '../../../lib/jquery-easyui/jquery.easyui.min',
     service: '../../Service/service',
     Cookies: '../../../lib/js.cookie',
     ajaxSetup: '../../../js/Controller/student/ajaxSetup',
@@ -8,9 +9,11 @@ require.config({
   }
 });
 
-require(['jquery', 'service', 'Cookies', 'ajaxSetup', 'tpl'], function($, service, Cookies, ajaxSetup, tpl) {
+require(['jquery', 'easyui', 'service', 'Cookies', 'ajaxSetup', 'tpl'], function($, easyui, service, Cookies, ajaxSetup, tpl) {
   $(function() {
     initHeader();
+
+    bindAddModule();
   });
 
   function initHeader() {
@@ -24,6 +27,17 @@ require(['jquery', 'service', 'Cookies', 'ajaxSetup', 'tpl'], function($, servic
       $('.header-wrap').html(tpl('Header', LogoImg));
       $('.top-nav-list').find('li').removeClass('cur');
       $($('.top-nav-list').find('li')[1]).addClass('cur');
+    });
+  }
+
+  function bindAddModule() {
+    $('#addModule').on('click', function() {
+      var id = Cookies.get('userID');
+      service.addModule(id, function(retData) {
+        if (retData.code === 1) {
+          $.messager.alert('提示消息', '课程添加成功', 'info');
+        }
+      });
     });
   }
 });

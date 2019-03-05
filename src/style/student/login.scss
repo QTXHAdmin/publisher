@@ -11,7 +11,7 @@ html, body{
   .main {
     width: 500px;
     height: 400px;
-    margin: 0 auto;
+    margin: 30px auto 0;
     padding: 30px 15px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -53,7 +53,7 @@ html, body{
             padding-left: 14px;
             border-radius: 0 4px 4px 0;
         }
-        .rememberPsw {
+        .login-option {
             font-size: 16px;
             text-align: center;
             height: 20px;
